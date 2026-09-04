@@ -1,82 +1,31 @@
-/* Ubuntu, Ubuntu */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+/* ============================================================
+   Ke Xu's Homepage - main.css (v4.9, rewritten)
+   - Legacy theme rules removed; system font stack (no webfont
+     dependency, loads instantly in mainland China)
+   - Styles for: header, nav, sections, news, experience,
+     research, education, honors, travel map, gallery
+   ============================================================ */
+
+/* ---------- base ---------- */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial,
+               sans-serif;
+  font-weight: 400;
   color: #333;
   line-height: 1.5;
   font-size: 16px;
-}
-
-a,
-a:hover {
-  color: #a00;
-  text-decoration: none;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+  background: #f5f6f8;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-}
-
-hr {
-  display: none;
-  height: 1px;
-  border: 0;
-  /* border-top: 1px solid #ccc; */
-  margin: 1rem 0;
-  padding: 0;
-}
-
-audio,
-canvas,
-img,
-video {
-  width: 100%;
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-blockquote {
-  margin-left: 1rem;
-  font-style: italic;
-  font-size: 1.4rem;
-  font-family: Georgia, bitstream charter, serif;
-  border-left: 3px solid;
-  border-color: #a00;
-  padding-left: 20px;
-}
-
-blockquote cite {
-  font-size: 70%;
-  opacity: 0.8;
-}
-span {
-    display: block;
 }
 
 a,
@@ -89,402 +38,868 @@ a:hover {
   text-decoration: underline;
 }
 
+hr {
+  display: none;
+}
+
+audio,
+canvas,
+img,
+video {
+  width: 100%;
+  vertical-align: middle;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Ubuntu, raleway, sans-serif;
+  font-family: inherit;
   line-height: 1.2;
-  color: #330;
-  font-weight: 100;
-  margin-bottom: 15px;
+  color: #1f2430;
+  font-weight: 600;
   margin-top: 20px;
-}
-
-h1 {
-  font-size: 2.75rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-h6 {
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-
-.container {
-  max-width: 800px;
-}
-
-ul {
-  padding-left: 15px;
-}
-
-ul.flat {
-  margin: 0;
-  padding: 0;
-}
-
-ul.flat li {
-  display: inline-block;
-  list-style: none;
-  margin-left: 0;
-}
-
-.prevent-collapse {
-  min-height: 0.1rem;
-}
-
-.page-title {
-  margin: 0;
-}
-
-.smaller {
-  font-size: 70%;
+  margin-bottom: 15px;
 }
 
 ul {
   list-style: disc outside;
+  padding-left: 15px;
 }
 
-.introduction ul li {
-  margin-bottom: 10px;
+.email,
+.news-date,
+.job-date,
+.research-date,
+.research-links a,
+.travel-list .vdate,
+.progress-label {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+               "Liberation Mono", monospace;
 }
 
-.introduction ul li p {
-  display: inline;
-}
-
-.highlight pre {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 20px;
-  background-color: #fafafa !important;
-}
-
-.highlight {
-  background: 0 0;
+/* ---------- layout ---------- */
+.container {
+  max-width: 900px;
+  margin: 50px auto 0;
 }
 
 .wrapper {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.container {
-  margin-top: 50px;
+/* ---------- header ---------- */
+.header {
+  background: #ffffff;
+  border: 1px solid #e6e8eb;
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin-bottom: 22px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
 }
 
-.header {
-  margin-bottom: 20px;
-  /* padding-bottom: 20px; */
+.header-layout {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
 }
 
 .header .profile_image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 30%;
-  height: auto;
+  width: 132px;
+  height: 132px;
+  max-width: none;
+  margin: 0;
   border-radius: 50%;
-  /* float: left; */
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px #e6e8eb, 0 6px 16px rgba(16, 24, 40, 0.1);
 }
 
-.header .name_image {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -1em;
-  max-width: 12%;
-  height: auto;
+.header-info {
+  flex: 1;
+  min-width: 240px;
 }
 
-.header h1,
-.header h2 {
-  /* added by zw12 */
-  display: inline-block;
-  /* added by zw12 */
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  line-height: 1.3em;
-}
-
-.header h2 {
-  font-size: 1.125rem;
-}
-
-.header nav {
-  margin-top: 20px;
-  /* border-top: 1px solid #f4f4f4; */
-}
-
-.header nav ul,
-.header nav li {
-  margin: 0;
-}
-
-.header nav ul.flat {
-  padding: 0;
-}
-
-.header nav ul.flat li {
-  display: inline-block;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-transform: capitalize;
-}
-
-.header .site-affilation {
+.title-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.header .site-affilation .email {
-  /* color: #a00; */
-  font-size: 14px;
-  display: block;
-  font-family: "Ubuntu Mono";
-  font-weight: bolder;
+.header .site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1f2430;
+  line-height: 1.2;
+  margin: 0 0 6px;
 }
 
-.header .site-affilation .name {
-  /* color: #a00; */
-  /* font-size: 14px; */
-  display: block;
-  font-family: Ubuntu;
-    /* font-family: "Ubuntu Mono"; */
-  /* font-weight: bolder; */
-}
-
-.header .site-affilation .position {
-  /* color: #a00; */
-  /* font-size: 14px; */
-  display: block;
-  /* font-family: Ubuntu; */
-  /* font-family: Ubuntu Condensed; */
-  font-family: "Ubuntu";
-  /* font-weight: bolder; */
-}
-
-.header .site-affilation nav {
+.header .site-title .name_image {
+  width: 46px;
+  max-width: none;
   margin: 0;
-  padding: 0;
+}
+
+.header .position {
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: #39424e;
+  margin-bottom: 2px;
+}
+
+.header .location {
+  font-size: 0.92rem;
+  color: #7a8699;
+  margin-bottom: 12px;
+}
+
+.header .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header .social-icons a {
+  display: inline-flex;
+  color: #4b5563;
+  margin-right: 8px;
+}
+
+.header .social-icons a:hover {
+  color: #a00;
+  text-decoration: none;
+}
+
+.header .social-icons a svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header .email {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #a00;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #a00;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.btn-cv:hover {
+  background: #850000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-cv svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- EN/ZH switch ---------- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: #f3f4f6;
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  padding: 2px;
+  flex: none;
+}
+
+.lang-switch button {
   border: none;
-}
-
-.header .site-affilation nav ul svg {
-  max-height: 15px;
-}
-
-/* header for projects */
-.header .logo {
-  display: block;
-  margin-top: 2%;
-  margin-bottom: -2%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 10%;
-  height: auto;
-}
-
-.page_title {
-  font-family: Ubuntu;
-  font-weight: bolder;
-  font-size: 1.5em;
-  margin-top: 10%;
-  display: block;
-}
-
-.page_meta {
-  display: block;
-  font-family: "Ubuntu Mono";
-  font-size: 14px;
-}
-
-.page_meta_icon {
-  font-weight: .5em;
-}
-
-.email {
-  /* color: #a00; */
-  font-size: 16px;
-  font-family: "Ubuntu Mono";
-  font-weight: bolder;
-}
-
-.collaborators {
-  font-size: 15px;
-  margin-left: 0em;
-  margin-top: .1em;
-  smartypants = false;
-}
-
-.year {
-  font-size: 20px;
-  margin-bottom: -.6em;
-}
-
-.project {
-  margin: .5em 0em 0em;
-  font-weight: bolder;
-  display: inline-block;
-}
-
-
-.advisor {
-  margin: 0em 0em 0em;
-}
-
-.publications {
-  margin-left: 0em;
-}
-
-.news {
-  margin-left: 0em;
-  margin-right: 0em;
-}
-
-.course {
-  margin-left: 0em;
-  margin-right: 0em;
-}
-
-.code_blog {
-    font-family: "Ubuntu Mono";
-    font-size: 14px;
-    margin: 0em 0em 0em;
-    display: inline-block;
-}
-
-.blog_cv {
-    font-family: "Ubuntu Mono";
-    font-size: 17px;
-    /* margin: 0em .9em 0em; */
-}
-
-.project_description {
-  margin: 0em 0em 0em;
-}
-
-.project_image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0em;
-  max-width: 90%;
-  height: auto;
-}
-
-.section .section-header {
+  background: transparent;
   font-size: 0.75rem;
   font-weight: 600;
+  color: #9aa3af;
+  padding: 3px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.lang-switch button.active {
+  background: #ffffff;
+  color: #a00;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.12);
+}
+
+.lang-switch button:hover:not(.active) {
+  color: #526071;
+}
+
+/* ---------- sticky nav ---------- */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  padding: 9px 16px;
+  margin-bottom: 22px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.nav-bar a {
+  display: inline-block;
+  color: #4b5563;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 11px;
+  padding: 2px 4px;
+}
+
+.nav-bar a:hover {
+  color: #a00;
+  text-decoration: none;
+}
+
+.nav-bar a.active {
+  color: #a00;
+}
+
+/* ---------- sections ---------- */
+.section {
+  background: #ffffff;
+  border: 1px solid #e6e8eb;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  scroll-margin-top: 72px;
+}
+
+.section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #1f2430;
   text-transform: uppercase;
-  color: #999;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 0.09em;
+  padding-bottom: 10px;
+  margin: 0 0 16px;
+  border-bottom: 2px solid #f0f1f3;
 }
 
-.recent-posts .posts .introduction {
-  margin-bottom: 30px;
+.section p {
+  margin: 8px 0;
 }
 
-.recent-posts .posts .introduction .meta,
-.introduction .introduction-header .meta,
-.list .posts .introduction .meta {
-  font-size: 0.725rem;
-  color: #999;
-  margin-bottom: 4px;
+.section ul {
+  margin: 6px 0;
 }
 
-.introduction .introduction-header {
-  margin-bottom: 30px;
+.section ul li {
+  margin-bottom: 6px;
 }
 
-.introduction .introduction-header .title {
+.section a {
+  color: #a00;
+}
+
+.interests {
+  background: #f6f7f9;
+  border: 1px solid #ecedf0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 14px;
+  font-size: 0.98rem;
+}
+
+/* ---------- news timeline ---------- */
+.news-list {
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
-.introduction .introduction-header .meta {
-  padding-left: 5px;
+.news-item {
+  position: relative;
+  padding: 8px 0 8px 96px;
+}
+
+.news-item::before {
+  content: "";
+  position: absolute;
+  left: 68px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: #e6e8eb;
+}
+
+.news-date {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 58px;
+  text-align: right;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #a00;
+}
+
+.news-item .news-text {
+  display: block;
+  color: #333;
+}
+
+/* ---------- work experience ---------- */
+.job {
+  margin-bottom: 24px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.job-role {
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: #1f2430;
+}
+
+.job-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #a00;
+  white-space: nowrap;
+}
+
+.job-org {
+  font-size: 0.96rem;
+  color: #526071;
+  margin: 2px 0 10px;
+}
+
+.job-project {
+  font-weight: 600;
+  color: #39424e;
+  margin: 12px 0 4px;
+}
+
+.job ul {
+  margin: 4px 0 0;
+}
+
+/* ---------- research experience ---------- */
+.research-item {
+  margin-bottom: 20px;
+}
+
+.research-item:last-child {
+  margin-bottom: 0;
+}
+
+.research-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.research-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #1f2430;
+}
+
+.research-date {
+  font-size: 0.82rem;
+  color: #7a8699;
+  white-space: nowrap;
+}
+
+.research-links {
+  margin-top: 5px;
+}
+
+.research-links a {
+  display: inline-block;
+  background: #f3f4f6;
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 0.78rem;
+  color: #39424e;
+  margin-right: 6px;
+}
+
+.research-links a:hover {
+  background: #a00;
+  color: #fff;
+  text-decoration: none;
+}
+
+.research-meta {
+  font-size: 0.88rem;
+  color: #7a8699;
+  margin: 4px 0;
+}
+
+.research-desc {
+  margin: 4px 0 0;
+  color: #444;
+}
+
+/* ---------- education / honors ---------- */
+.plain-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.plain-list li {
+  margin-bottom: 10px;
+}
+
+.plain-list li:last-child {
+  margin-bottom: 0;
+}
+
+.muted {
+  color: #7a8699;
+  font-size: 0.92rem;
+}
+
+/* ---------- travel ---------- */
+.travel-note {
+  margin: 0 0 12px;
+}
+
+.travel-note .map-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  font-size: 0.85rem;
+  color: #526071;
+}
+
+.travel-note .legend-chip {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.travel-note .legend-chip.visited {
+  background: #a00;
+}
+
+.travel-note .legend-chip.planned {
+  background: #eec3c3;
+  border: 1px dashed #c98a8a;
+}
+
+.travel-note .legend-chip.not-yet {
+  background: #e8ebef;
+  border: 1px solid #b7c0cc;
+}
+
+.travel-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 6px;
+  background: #eef0f3;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: #a00;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+.progress-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7a8699;
+  white-space: nowrap;
+}
+
+#travel-map {
+  height: 340px;
+  border-radius: 12px;
+  border: 1px solid #e6e8eb;
+  background: #eef1f4;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#travel-map img {
+  width: auto;
+  max-width: none;
+}
+
+.travel-map-fallback {
+  padding: 14px;
+  font-size: 0.85rem;
+  color: #7a8699;
+  margin: 0;
+}
+
+.leaflet-tooltip {
+  font-size: 0.8rem;
+}
+
+.leaflet-control-home a {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.travel-details {
   margin-top: 10px;
 }
 
-.list .posts .introduction .meta {
-  margin-bottom: 0;
-  margin-left: 5px;
+.travel-details summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #526071;
 }
 
+.travel-details summary:hover {
+  color: #a00;
+}
+
+.section .travel-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
+  columns: 4;
+  column-gap: 18px;
+  font-size: 0.8rem;
+}
+
+.section .travel-list li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3px;
+  break-inside: avoid;
+  color: #6b7686;
+}
+
+.section .travel-list li.visited {
+  color: #a00;
+  font-weight: 600;
+}
+
+.section .travel-list li.planned {
+  color: #a26161;
+}
+
+.travel-list .chk {
+  flex: none;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
+  border: 1.5px solid #c3cad3;
+  background: #fff;
+  position: relative;
+}
+
+.travel-list li.visited .chk {
+  background: #a00;
+  border-color: #a00;
+}
+
+.travel-list li.visited .chk::after {
+  content: "";
+  position: absolute;
+  left: 3.5px;
+  top: 1px;
+  width: 4px;
+  height: 7px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.travel-list li.planned .chk {
+  background: #f3dede;
+  border-style: dashed;
+  border-color: #c98a8a;
+}
+
+.travel-list .cname {
+  min-width: 0;
+}
+
+.travel-list .vdate {
+  font-size: 0.7rem;
+  color: #b0b8c4;
+  white-space: nowrap;
+}
+
+/* ---------- gallery ---------- */
+.gallery-note {
+  margin: 0 0 12px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.gallery-empty {
+  color: #9aa3af;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 28px 0;
+  text-align: center;
+  border: 1px dashed #d8dde3;
+  border-radius: 10px;
+  grid-column: 1 / -1;
+}
+
+.gallery-item {
+  margin: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e6e8eb;
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-item figcaption {
+  font-size: 0.82rem;
+  color: #7a8699;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(15, 18, 24, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  width: auto;
+  max-width: 92vw;
+  max-height: 82vh;
+  border-radius: 8px;
+}
+
+.lightbox figcaption {
+  color: #d7dce3;
+  font-size: 0.9rem;
+}
+
+/* ---------- back to top ---------- */
+#back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e6e8eb;
+  background: #fff;
+  color: #526071;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(6px);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+#back-to-top:hover {
+  color: #a00;
+}
+
+#back-to-top svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- footer ---------- */
 .footer {
-  text-align: right;
-  font-size: 0.75em;
-  color: #999;
-  border-top: 1px solid #f4f4f4;
-  padding: 20px 0;
-  margin-top: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9aa3af;
+  padding: 14px 0 6px;
+  margin-top: 6px;
 }
 
-.page-title {
-  margin-bottom: 0;
+/* ---------- responsive ---------- */
+@media (min-width: 900px) {
+  .section .travel-list {
+    columns: 5;
+  }
 }
 
-.tag-cloud {
-  margin-top: 20px;
+/* ---------- print ---------- */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .nav-bar,
+  #back-to-top,
+  .lang-switch,
+  #travel-map,
+  .travel-details,
+  .travel-progress,
+  .map-legend {
+    display: none !important;
+  }
+
+  .header,
+  .section {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
 }
 
-.tag-cloud a {
-  margin-right: 15px;
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
 }
 
-
-
-@media (max-width: 767px) {
+@media (max-width: 640px) {
   body {
     padding: 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  h4 {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .container {
     margin-top: 10px;
   }
-}
 
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
+  .header {
+    padding: 20px;
+  }
+
+  .header-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .header .profile_image {
+    width: 112px;
+    height: 112px;
+  }
+
+  .header .contact-row {
+    justify-content: center;
+  }
+
+  .nav-bar {
+    border-radius: 12px;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: left;
+  }
+
+  .nav-bar a {
+    margin: 0 8px;
+  }
+
+  .news-item {
+    padding: 18px 0 4px 0;
+  }
+
+  .news-item::before {
+    display: none;
+  }
+
+  .news-item .news-date {
+    position: static;
+    width: auto;
+    text-align: left;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .section .travel-list {
+    columns: 2;
+  }
+
+  #travel-map {
+    height: 260px;
   }
 }
