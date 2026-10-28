@@ -1,24 +1,5 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T03:30:13.765Z",
-  "items": [
-    {
-      "id": "b815907f56b14dc39f59",
-      "title": "Pipeline test",
-      "titleZh": "流程测试",
-      "caption": "End-to-end sync test",
-      "captionZh": "",
-      "location": "Hangzhou",
-      "date": "2026-10",
-      "tags": [
-        "test"
-      ],
-      "width": 1000,
-      "height": 700,
-      "file": "/portfolio/b815907f56b14dc39f59.jpg",
-      "thumb": "/portfolio/b815907f56b14dc39f59-thumb.jpg",
-      "createdAt": "2026-10-28T03:30:13.765Z",
-      "uploadedBy": "hugo2001xk@gmail.com"
-    }
-  ]
+  "updatedAt": "2026-10-28T03:32:26.769Z",
+  "items": []
 }
