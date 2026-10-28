@@ -1,0 +1,152 @@
+<!-- Version:1.0.0 Modify Date:2026-10-28 -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV — Ke Xu</title>
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f4f1ea" />
+<meta name="description" content="Curriculum vitae of Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/main.css?v=5" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) { t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+    document.documentElement.setAttribute("data-theme", t);
+    document.documentElement.classList.add("js");
+  } catch (e) {}
+})();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#cv">Skip to CV</a>
+
+<div class="container wrapper">
+  <div class="cv-toolbar no-print">
+    <div>
+      <a href="index.html">← Back to homepage</a>
+      <span class="sep">·</span>
+      <span class="muted">Print or save this page as PDF</span>
+    </div>
+    <div class="header-tools">
+      <button class="btn-cv" type="button" id="print-cv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save PDF
+      </button>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <article class="cv-sheet" id="cv">
+    <header class="cv-head">
+      <div>
+        <h1>Ke Xu <span style="font-family: var(--sans); font-size: 1.1rem; color: var(--muted); font-weight: 500;">许可</span></h1>
+        <div class="cv-title">Algorithm Engineer II · Huawei 2012 Laboratory</div>
+      </div>
+      <div class="cv-contact">
+        <a href="mailto:hugo2001xk@gmail.com">hugo2001xk@gmail.com</a>
+        <a href="https://hugoxk.github.io">hugoxk.github.io</a>
+        <a href="https://hugoxk.online">hugoxk.online</a>
+        <a href="https://github.com/HugoXK">github.com/HugoXK</a>
+        <a href="https://www.linkedin.com/in/hugoxk">linkedin.com/in/hugoxk</a>
+      </div>
+    </header>
+
+    <section class="cv-section">
+      <h2>Summary</h2>
+      <p style="margin: 0; color: var(--ink-2); font-size: 0.9rem;">Algorithm engineer working on large-scale RLHF post-training and autonomous agent systems. At Huawei 2012 Laboratory I implemented GRPO/DAPO training modules on Ascend NPU clusters and now build multi-agent schedulers and recursive self-improvement (RSI) loops with held-out evaluation and auditable skill libraries.</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+      <div class="cv-item">
+        <div class="cv-role"><b>Algorithm Engineer II · Huawei 2012 Laboratory</b><span>May 2025 – Present</span></div>
+        <div class="cv-org">Large-Scale RLHF Training · Agent Systems for Scientific Discovery</div>
+        <ul class="cv-list">
+          <li>Implemented core modules of GRPO and DAPO for large-scale RLHF training on Ascend NPU clusters.</li>
+          <li>Led GRPO training and tuning for large models, including dynamic sequence packing for long chain-of-thought samples and cluster-scale stability validation.</li>
+          <li>Designed and built a pluggable DAG-based multi-agent scheduler with configurable node types and dependencies for a scientific-discovery agent framework.</li>
+          <li>Building an RSI loop: rollout, failure-driven skill induction and top-K frontier selection over versioned, auditable skill libraries under strict train/validation/test discipline.</li>
+          <li>Exploring open-ended evolution with island populations, MAP-Elites quality-diversity archives and tree search; next, self-generated evaluation tasks.</li>
+        </ul>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>Algorithm Engineer Intern · Ant Group</b><span>Jun 2023 – Sep 2023</span></div>
+        <ul class="cv-list">
+          <li>Built a financial agent prototype on AntGLM and LangChain with ReAct-style reasoning, hybrid BM25/embedding retrieval and multi-turn tool calling.</li>
+          <li>Fine-tuned AntGLM with LoRA for anti-money-laundering anomaly detection.</li>
+        </ul>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>AI Engineer Intern · State Street</b><span>Nov 2022 – Feb 2023</span></div>
+        <ul class="cv-list">
+          <li>Designed reconciliation algorithms for an AI-based automatic reconciliation system.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Research</h2>
+      <div class="cv-item">
+        <div class="cv-role"><b>Active Learning on Knowledge Graph Question Answering</b><span>Summer 2022</span></div>
+        <div class="cv-org">Advisor: Prof. Hanghang Tong · UIUC · NSF REU</div>
+        <ul class="cv-list"><li>Designed an active-learning strategy for KGQA fusing graph centrality, information density and node uncertainty.</li></ul>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>Exploration of Reflective ASMs for Security</b><span>Apr 2021 – Apr 2022</span></div>
+        <div class="cv-org">Advisor: Prof. Klaus-Dieter Schewe · Zhejiang University</div>
+        <ul class="cv-list"><li>Investigated reflective Abstract State Machines (ASMs) for security applications.</li></ul>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>AI-Assisted Psychological Counseling Chatbot</b><span>Summer 2021</span></div>
+        <div class="cv-org">Advisor: Dr. Zhenzhong Lan · Westlake University</div>
+        <ul class="cv-list"><li>Built blacklist/whitelist safety classification and knowledge-graph-based intent and emotion recognition for counseling dialogue.</li></ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-item">
+        <div class="cv-role"><b>M.S. in Computer Science · UC San Diego</b><span>Sep 2023 – Dec 2024</span></div>
+        <div class="cv-org">Machine Learning concentration</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>B.S. in Electrical Engineering · UIUC</b><span>Sep 2021 – May 2023</span></div>
+        <div class="cv-org">Minor in Computer Science · dual-degree program with Zhejiang University</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-role"><b>B.Eng. in Electrical Engineering and Automation · Zhejiang University</b><span>Sep 2019 – Jul 2023</span></div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Honors</h2>
+      <ul class="cv-list">
+        <li>2012 Star Award, Huawei — 2026</li>
+        <li>STDT Outstanding Project Delivery Award, Ascend Basic Software — 2026</li>
+        <li>NSF REU Scholarship, National Science Foundation — 2022</li>
+        <li>MCM/ICM Meritorious Winner (Top 7% of 10,053 teams) — 2021</li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
+      <h2>Selected Skills</h2>
+      <p style="margin: 0; color: var(--ink-2); font-size: 0.88rem;">Python · PyTorch · RLHF · GRPO / DAPO · distributed training · Ascend NPU · LLM agents · multi-agent scheduling · RAG · LangChain · evaluation design · technical writing</p>
+    </section>
+  </article>
+</div>
+
+<script src="js/ui.js"></script>
+<script>
+document.getElementById("print-cv").addEventListener("click", function () { window.print(); });
+</script>
+</body>
+</html>

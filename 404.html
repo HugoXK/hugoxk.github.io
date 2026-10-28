@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
-<title>404 - Ke Xu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Ke Xu</title>
+<meta name="robots" content="noindex">
 <style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    background: #f5f6f8;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  }
-  a img {
-    max-width: 80vw;
-    max-height: 70vh;
-    height: auto;
-    border-radius: 12px;
-  }
-  p a {
-    color: #a00;
-    font-size: 0.95rem;
-    text-decoration: none;
-  }
-  p a:hover { text-decoration: underline; }
+:root{--bg:#f4f1ea;--surface:#fffdfa;--ink:#1b1916;--muted:#6d675e;--line:#e3ddd2;--accent:#b3261e}
+[data-theme="dark"]{--bg:#0d0c0b;--surface:#151210;--ink:#f3eee5;--muted:#a89f92;--line:#2a251f;--accent:#ff6b5e}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;text-align:center}
+img{max-width:min(520px,80vw);max-height:46vh;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 46px rgba(40,32,20,.1)}
+h1{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:clamp(2rem,6vw,3rem);margin:0;letter-spacing:-.03em}
+p{margin:0;color:var(--muted);font-size:.95rem}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}
+.links{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:.9rem}
 </style>
+<script>try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
   <a href="/"><img src="files/imgs/404_Not_Found.png" alt="404 Not Found"></a>
-  <p><a href="/">&larr; Back to Ke Xu's Homepage</a></p>
+  <h1>Lost in the map.</h1>
+  <p>This page does not exist. Try the homepage, or explore the lab.</p>
+  <div class="links"><a href="/">&larr; Homepage</a><a href="https://hugoxk.online">HUGOXK LAB ↗</a></div>
 </body>
 </html>

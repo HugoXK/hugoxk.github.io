@@ -1,0 +1,113 @@
+<!-- Version:2.0.0 Modify Date:2026-10-28 -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-zh="博客 — 许可">Blog — Ke Xu</title>
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f4f1ea" />
+<meta name="description" content="Ke Xu's blog — notes on frontier AI directions and thoughts from paper reading." />
+<meta property="og:title" content="Blog — Ke Xu" />
+<meta property="og:description" content="Notes on frontier AI directions and thoughts from paper reading." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hugoxk.github.io/blog.html" />
+<meta property="og:image" content="https://hugoxk.github.io/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/main.css?v=5" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) { t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+    document.documentElement.setAttribute("data-theme", t);
+    document.documentElement.classList.add("js");
+  } catch (e) {}
+})();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#view-list" data-zh="跳到主要内容">Skip to content</a>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<div class="container wrapper">
+  <header class="header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="header-layout">
+      <div class="header-info">
+        <div class="title-row">
+          <div class="title-block">
+            <div class="eyebrow">Notes · Papers · Systems</div>
+            <h1 class="site-title" data-zh="博客">Blog</h1>
+          </div>
+          <div class="header-tools">
+            <div class="lang-switch" role="group" aria-label="Language / 语言">
+              <button type="button" data-lang="en">EN</button>
+              <button type="button" data-lang="zh">中文</button>
+            </div>
+            <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="position" data-zh="前沿观察与论文阅读笔记。">Notes on frontier directions, and thoughts from paper reading.</div>
+        <div class="contact-row">
+          <a href="index.html" data-zh="← 返回主页">← Back to homepage</a>
+          <a href="https://hugoxk.online" rel="noopener">HUGOXK LAB ↗</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar" aria-label="Site navigation">
+    <a href="index.html" data-zh="关于">About</a>
+    <a href="index.html#travel" data-zh="旅行">Travel</a>
+    <a href="index.html#gallery" data-zh="相册">Gallery</a>
+    <a href="blog.html" class="active" data-zh="博客">Blog</a>
+    <a class="nav-external" href="https://hugoxk.online" rel="noopener">Lab ↗</a>
+  </nav>
+
+  <main>
+    <section class="section" id="view-list">
+      <h2 class="section-title" data-zh="文章">Posts</h2>
+      <div id="post-list"></div>
+      <p id="blog-empty" class="gallery-empty" data-zh="还没有文章——这里将分享我对业界前沿方向的观察与思考，以及读论文时的一些想法和感悟。敬请期待。">No posts yet — this is where I will share observations on frontier directions and thoughts from my paper reading. Coming soon.</p>
+    </section>
+
+    <section class="section" id="view-post" style="display:none">
+      <h2 class="section-title" id="post-title"></h2>
+      <div class="post-meta" id="post-meta"></div>
+      <article class="post-body" id="post-body"></article>
+      <a class="post-back" href="blog.html" data-zh="← 返回文章列表">← Back to all posts</a>
+      <div class="comments">
+        <h3 class="section-title" data-zh="评论">Comments</h3>
+        <div id="giscus-container"></div>
+        <p class="giscus-note" id="giscus-note" data-zh="评论区准备中——giscus 的一次性配置步骤见仓库 README。" style="display:none">Comments are almost ready — see the README for the one-time giscus setup.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>&copy; 2026 Ke Xu <span class="sep">·</span> <a href="index.html" data-zh="主页">Homepage</a> <span class="sep">·</span> <a href="https://hugoxk.online">HUGOXK LAB</a></div>
+      <div class="footer-note" data-zh="使用原生 HTML、CSS 和 JavaScript 构建。">Built with plain HTML, CSS, and JavaScript.</div>
+    </div>
+  </footer>
+</div>
+
+<button id="back-to-top" type="button" aria-label="Back to top / 回到顶部" title="Back to top / 回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/blog-posts.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/blog.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,47 +1,69 @@
 # hugoxk.github.io
 
-Personal homepage of Ke Xu (许可) — a single static page, no build step, no framework.
+Personal homepage of Ke Xu (许可) — a static, bilingual academic profile with a
+live travel map, a managed photo gallery, dark mode, a blog and a print-friendly CV.
 
-## Local preview & deploy
+## Local preview
 
-Open `index.html` directly in a browser, or run `python3 -m http.server` and visit
-`http://localhost:8000`. Deploy by pushing to `main` (GitHub Pages, with `.nojekyll`).
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-## How to edit
+No build step. Deploy by pushing to `main` (GitHub Pages, `.nojekyll`).
 
-- **Text content** — everything lives in `index.html`. Every bilingual element carries
-  a `data-zh="中文"` attribute next to the English text; edit both together.
-- **`[VERIFY]` markers** — data that still needs confirmation. Search `[VERIFY]` in
-  `index.html`.
-- **`[TODO]` markers** — pending files/actions (CV PDF, gallery photos, repo links).
-- **Travel map** — edit `js/countries-list.js`:
-  - `[ ] Name` — not visited
-  - `[X] Name` — visited
-  - `[X 2019-09] Name` — visited, first visited in 2019-09
-  - `[P] Name` — planned
-  - `[P 2026-10] Name` — planned for 2026-10
-
-  Map fill, hover tooltips, checklist, counters and the progress bar update
-  automatically on reload.
-- **Gallery** — drop photos into `files/imgs/gallery/`, then copy the commented
-  `<figure>` template inside the Gallery section. Click-to-zoom (lightbox) is ready.
-- **CV** — place the PDF at `files/CV_KeXu_2026.pdf`; the header button links there.
-- **Version history** — keep the `<!-- Version:x.x.x -->` comment block at the top of
-  `index.html` in sync when you make a release.
-
-## Structure
+## Content and data
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The whole page |
-| `css/main.css` | All page styles |
-| `css/leaflet.css` | Map library styles (self-hosted Leaflet 1.9.4) |
-| `js/travel.js` | Choropleth map logic (lazy-loads Leaflet + geo data) |
-| `js/countries-geo.js` | Country polygons / centroids / Chinese names — **auto-generated, do not hand-edit** |
-| `js/countries-list.js` | Your visited/planned checklist — **edit this** |
-| `js/i18n.js` | EN/ZH toggle (persists in `localStorage`, swaps `data-zh` elements) |
-| `js/ui.js` | Nav scroll-spy, back-to-top, gallery lightbox |
-| `js/leaflet.min.js` | Self-hosted Leaflet |
-| `og-image.png` | Social share card (1200×630) — regenerate if your info changes |
-| `favicon.svg` + PNGs | Site icons (red "K" monogram) |
-| `404.html`, `robots.txt`, `.nojekyll` | Static-site housekeeping |
+| `index.html` | Profile: about, news, experience, research, education, honors, travel, gallery |
+| `cv.html` | Print / save-as-PDF CV |
+| `blog.html` + `blog/posts/<slug>.md` | Blog list and Markdown posts |
+| `data/travel.json` | Live travel status and dates (written by the console, synced here) |
+| `data/portfolio.json` | Gallery manifest (written by the console, synced here) |
+| `portfolio/` | Gallery images and thumbnails (written by the console, synced here) |
+| `js/countries-list.js` | Offline fallback for the travel map |
+| `js/travel.js` | Fetches live travel data, renders the map, filters and checklist |
+| `js/gallery.js` | Fetches the gallery manifest and renders the masonry grid + lightbox |
+| `js/site-config.js` | Data endpoints (relative, same-origin) |
+| `js/i18n.js` | EN/ZH toggle, persisted in `localStorage` |
+| `js/ui.js` | Theme, scroll progress, nav spy, reveal animations, back-to-top |
+| `css/main.css` | Full design system (light/dark, travel, gallery, blog, CV, print) |
+
+## Admin console
+
+Travel and gallery content is managed at:
+
+**https://portal.hugoxk.online/admin** (Cloudflare Access / GitHub login)
+
+- Check countries and set visit / planned dates (`YYYY-MM`).
+- Upload, caption, reorder and delete gallery photos.
+- Saves write to the server copy under `~/work/landing/{data,portfolio}` and are
+  synced automatically to this repository by `~/work/sync-profile-data.js`.
+- No manual `git commit` or `git push` is required for content updates.
+
+The profile reads `data/travel.json`, `data/portfolio.json` and `portfolio/*`
+from this origin, so it stays fast and does not depend on the Cloudflare Tunnel.
+
+## Editing the site itself
+
+- **Text** — edit `index.html`; bilingual elements carry `data-zh` (and optional
+  `data-zh-placeholder`, `data-zh-title`, `data-zh-aria-label`, `data-zh-alt`).
+- **Offline travel fallback** — edit `js/countries-list.js` only if the live data
+  endpoint is unavailable.
+- **Theme** — colors live in `:root` and `[data-theme="dark"]` at the top of
+  `css/main.css`.
+- **Profile image** — `profile.webp` / `profile-360.webp` with `profile.jpg` as
+  the fallback. Keep the source square.
+- **Cache busting** — bump `css/main.css?v=5` when changing styles.
+- **Blog** — add `blog/posts/<slug>.md`, then add an entry to `js/blog-posts.js`.
+  Comments use giscus (see `BLOG_GISCUS` in that file).
+- **CV** — `cv.html`; use the print button to save a PDF.
+
+## Deployment
+
+- **Profile** — GitHub Pages from `main`.
+- **Landing / Portal** — server `~/work/landing` + nginx `127.0.0.1:3090` and
+  `~/work/portal.js` on `127.0.0.1:3092`, behind Cloudflare Tunnel / Access.
+- **Content sync** — the console writes the server copy and pushes only changed
+  data/image files to this repository through the GitHub Git Data API.

@@ -1,30 +1,18 @@
-<!-- Version:1.0.0 Modify Date:2021-08-13 -->
-<!-- Version:2.0.0 Modify Data:2023-08-05 -->
-<!-- Version:3.0.0 Modify Data:2025-09-15 -->
-<!-- Version:4.0.0 Modify Date:2026-09-04 -->
-
-<!--
-  ============================================================
-  [PLACEHOLDER INDEX]
-  Search for "[VERIFY]" (HTML comments) to find every piece of
-  unconfirmed data. Edit the value right after each marker.
-  "[TODO]" marks files/actions still needed.
-  ============================================================
--->
-
+<!-- Version:5.0.0 Modify Date:2026-10-28 -->
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title data-zh="许可的个人主页">Ke Xu's Homepage</title><link rel="icon" type="image/svg+xml" href="favicon.svg">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<meta name="theme-color" content="#ffffff">
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-zh="许可的个人主页">Ke Xu's Homepage</title>
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f4f1ea" />
+<meta name="description" content="Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)." />
+<link rel="canonical" href="https://hugoxk.github.io/" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Ke Xu" />
-<meta property="og:description" content="Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)." />
+<meta property="og:site_name" content="Ke Xu" />
+<meta property="og:title" content="Ke Xu" />
+<meta property="og:description" content="Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hugoxk.github.io/" />
 <meta property="og:image" content="https://hugoxk.github.io/og-image.png" />
@@ -32,249 +20,329 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Ke Xu "/>
-<meta name="twitter:description" content="Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)."/>
-<meta name="twitter:image" content="https://hugoxk.github.io/og-image.png"/>
-<meta name="description" content="Ke Xu — Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)." />
-	<link rel="stylesheet" href="css/leaflet.css" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ke Xu" />
+<meta name="twitter:description" content="Algorithm Engineer II at Huawei 2012 Laboratory. RLHF infrastructure, agent systems, and recursive self-improvement (RSI)." />
+<meta name="twitter:image" content="https://hugoxk.github.io/og-image.png" />
 
-	<link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-	
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Person",
-	  "name": "Ke Xu",
-	  "alternateName": "许可",
-	  "jobTitle": "Algorithm Engineer II",
-	  "worksFor": { "@type": "Organization", "name": "Huawei 2012 Laboratory" },
-	  "email": "mailto:ke.xu@zju.edu.cn",
-	  "url": "https://hugoxk.github.io/",
-	  "sameAs": [
-	    "https://github.com/HugoXK",
-	    "https://www.linkedin.com/in/hugoxk"
-	  ],
-	  "alumniOf": [
-	    { "@type": "CollegeOrUniversity", "name": "University of California San Diego" },
-	    { "@type": "CollegeOrUniversity", "name": "University of Illinois Urbana-Champaign" },
-	    { "@type": "CollegeOrUniversity", "name": "Zhejiang University" }
-	  ]
-	}
-	</script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="preload" as="image" href="profile.webp" type="image/webp" />
+
+<link rel="stylesheet" href="css/leaflet.css" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/main.css?v=5" />
+
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) { t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+    document.documentElement.setAttribute("data-theme", t);
+    document.documentElement.classList.add("js");
+  } catch (e) {}
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ke Xu",
+  "alternateName": "许可",
+  "jobTitle": "Algorithm Engineer II",
+  "worksFor": { "@type": "Organization", "name": "Huawei 2012 Laboratory" },
+  "email": "mailto:hugo2001xk@gmail.com",
+  "url": "https://hugoxk.github.io/",
+  "sameAs": [
+    "https://github.com/HugoXK",
+    "https://www.linkedin.com/in/hugoxk",
+    "https://hugoxk.online"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of California San Diego" },
+    { "@type": "CollegeOrUniversity", "name": "University of Illinois Urbana-Champaign" },
+    { "@type": "CollegeOrUniversity", "name": "Zhejiang University" }
+  ]
+}
+</script>
 </head>
 
-	<body>
-		<div class="container wrapper">
+<body>
+<a class="skip-link" href="#about" data-zh="跳到主要内容">Skip to content</a>
+<div id="scroll-progress" aria-hidden="true"></div>
 
-			<header class="header">
-				<div class="header-layout">
-					<img src="profile.jpg" class="profile_image" alt="Ke Xu">
-					<div class="header-info">
-						<div class="title-row">
-							<h1 class="site-title">Ke Xu <img src="name.png" class="name_image" alt="许可"></h1>
-							<div class="lang-switch" role="group" aria-label="Language / 语言">
-								<button type="button" data-lang="en">EN</button>
-								<button type="button" data-lang="zh">中文</button>
-							</div>
-						</div>
-						<div class="position" data-zh="算法工程师 II，华为2012实验室">Algorithm Engineer II, Huawei 2012 Laboratory</div>
-						<div class="contact-row">
-							<span class="social-icons">
-								<a href="https://github.com/HugoXK" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-								<a href="https://www.linkedin.com/in/hugoxk" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-							</span>
-							<a class="email" href="mailto:ke.xu@zju.edu.cn">ke.xu@zju.edu.cn</a>
-							<!-- [TODO] Place files/CV_KeXu_2026.pdf into the repo to activate the CV button -->
-							<a class="btn-cv" href="files/CV_KeXu_2026.pdf" title="CV / Resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span data-zh="CV / 简历"> CV / Resume</span></a>
-						</div>
-					</div>
-				</div>
-			</header>
+<div class="container wrapper">
+  <header class="header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="header-layout">
+      <picture class="avatar-wrap">
+        <source srcset="profile-360.webp 360w, profile.webp 720w" sizes="(max-width: 640px) 112px, 148px" type="image/webp" />
+        <img src="profile.jpg" class="profile_image" width="720" height="720" alt="Ke Xu" />
+      </picture>
+      <div class="header-info">
+        <div class="title-row">
+          <div class="title-block">
+            <div class="eyebrow">Algorithms · Agents · RSI</div>
+            <h1 class="site-title">Ke Xu <img src="name.png" class="name_image" alt="许可" /></h1>
+          </div>
+          <div class="header-tools">
+            <div class="lang-switch" role="group" aria-label="Language / 语言">
+              <button type="button" data-lang="en">EN</button>
+              <button type="button" data-lang="zh">中文</button>
+            </div>
+            <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="position" data-zh="算法工程师 II · 华为 2012 实验室">Algorithm Engineer II · Huawei 2012 Laboratory</div>
+        <div class="header-meta">
+          <span class="status-pill"><span class="status-dot"></span><span data-zh="自主 Agent · 递归自我提升">Autonomous agents · RSI</span></span>
+          <span class="header-place">Shenzhen / Hangzhou</span>
+        </div>
+        <div class="contact-row">
+          <span class="social-icons">
+            <a href="https://github.com/HugoXK" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            <a href="https://www.linkedin.com/in/hugoxk" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://hugoxk.online" aria-label="HUGOXK LAB" title="HUGOXK LAB"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></a>
+          </span>
+          <a class="email" href="mailto:hugo2001xk@gmail.com">hugo2001xk@gmail.com</a>
+          <a class="btn-cv" href="cv.html" title="CV / Resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span data-zh="CV / 简历">CV / Resume</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-			<nav class="nav-bar">
-				<a href="#about" data-zh="关于">About</a>
-				<a href="#news" data-zh="动态">News</a>
-				<a href="#experience" data-zh="经历">Experience</a>
-				<a href="#research" data-zh="科研">Research</a>
-				<a href="#education" data-zh="教育">Education</a>
-				<a href="#honors" data-zh="荣誉">Honors</a>
-				<a href="#travel" data-zh="旅行">Travel</a>
-				<a href="#gallery" data-zh="相册">Gallery</a>
-			</nav>
+  <nav class="nav-bar" aria-label="Section navigation">
+    <a href="#about" data-zh="关于">About</a>
+    <a href="#news" data-zh="动态">News</a>
+    <a href="#experience" data-zh="经历">Experience</a>
+    <a href="#research" data-zh="科研">Research</a>
+    <a href="#education" data-zh="教育">Education</a>
+    <a href="#honors" data-zh="荣誉">Honors</a>
+    <a href="#travel" data-zh="旅行">Travel</a>
+    <a href="#gallery" data-zh="相册">Gallery</a>
+    <a href="blog.html" data-zh="博客">Blog</a>
+    <a class="nav-external" href="https://hugoxk.online" rel="noopener">Lab ↗</a>
+  </nav>
 
-			<section class="section" id="about">
-				<h2 class="section-title" data-zh="关于">About</h2>
-				<p data-zh="我是许可，华为2012实验室算法工程师 II。入职后先做 RLHF 训练基础设施（在昇腾 NPU 集群上实现与调优 GRPO、DAPO），此后重心转向智能体系统：面向科学发现的多智能体调度，以及最近的递归自我提升（RSI）。">I am Ke Xu, an Algorithm Engineer II at Huawei 2012 Laboratory. I started with RLHF training infrastructure (GRPO and DAPO on Ascend NPU clusters), and my focus has since moved to agent systems: multi-agent scheduling for scientific discovery and, most recently, recursive self-improvement (RSI).</p>
-				<p data-zh='我在<a href="https://cse.ucsd.edu">加州大学圣地亚哥分校</a>（UCSD）计算机科学与工程系取得计算机科学硕士学位，方向为机器学习。'>I completed my M.S. in Computer Science at the <a href="https://cse.ucsd.edu">Computer Science and Engineering Department</a>, <a href="https://www.ucsd.edu">University of California San Diego</a> (UCSD), where my concentration was Machine Learning.</p>
-				<p data-zh='此前，我毕业于<a href="https://www.zju.edu.cn/english/">浙江大学</a>与<a href="https://illinois.edu">伊利诺伊大学厄巴纳-香槟分校</a>联合培养的双学位项目，主修电气工程、辅修计算机科学；本科期间，我是 <a href="https://engine.eng.ufl.edu">ENGINE</a>（Engineering National Graduate Institutional Name Exchange）成员，参与 <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947135">美国国家科学基金会（NSF）1947135</a> 资助的 <a href="https://cs.illinois.edu/research/undergraduate-research">本科生科研计划（REU）</a>，导师为<a href="http://tonghanghang.org">童行行（Hanghang Tong）教授</a>。'>Prior to that, I graduated from a dual-degree program jointly held by <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> and the <a href="https://illinois.edu">University of Illinois at Urbana-Champaign</a>, with major in Electrical Engineering and minor in Computer Science, where I was a member of <a href="https://engine.eng.ufl.edu">Engineering National Graduate Institutional Name Exchange (ENGINE)</a>, a participant of <a href="https://cs.illinois.edu/research/undergraduate-research">Research Experiences for Undergraduate (REU)</a> supported by <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947135">National Science Foundation (NSF) 1947135</a>, advised by <a href="http://tonghanghang.org">Prof. Hanghang Tong</a>.</p>
-				<p data-zh="求学期间，我曾在蚂蚁集团担任算法工程师实习生，从事大模型在安全与风控领域（如反洗钱 AML）的应用。">Previously, I was an Algorithm Engineer Intern at Ant Group, where I worked on the application of Large Language Models (LLM) in security and risk management domains such as Anti-Money Laundering (AML).</p>
-				<p class="interests" data-zh='<b>研究兴趣：</b>强化学习与智能体系统，尤其是递归自我提升（RSI）。'><b>Research Interests:</b> Reinforcement learning and agent systems, especially recursive self-improvement (RSI).</p>
-			</section>
+  <main>
+    <section class="section" id="about">
+      <h2 class="section-title" data-zh="关于">About</h2>
+      <p data-zh="我是许可，华为 2012 实验室算法工程师 II。入职后先做 RLHF 训练基础设施（在昇腾 NPU 集群上实现与调优 GRPO、DAPO），此后重心转向智能体系统：面向科学发现的多智能体调度，以及最近的递归自我提升（RSI）。">I am Ke Xu, an Algorithm Engineer II at Huawei 2012 Laboratory. I started with RLHF training infrastructure (GRPO and DAPO on Ascend NPU clusters), and my focus has since moved to agent systems: multi-agent scheduling for scientific discovery and, most recently, recursive self-improvement (RSI).</p>
+      <p data-zh='我在<a href="https://cse.ucsd.edu">加州大学圣地亚哥分校</a>（UCSD）计算机科学与工程系取得计算机科学硕士学位，方向为机器学习。'>I completed my M.S. in Computer Science at the <a href="https://cse.ucsd.edu">Computer Science and Engineering Department</a>, <a href="https://www.ucsd.edu">University of California San Diego</a> (UCSD), where my concentration was Machine Learning.</p>
+      <p data-zh='此前，我毕业于<a href="https://www.zju.edu.cn/english/">浙江大学</a>与<a href="https://illinois.edu">伊利诺伊大学厄巴纳-香槟分校</a>联合培养的双学位项目，主修电气工程、辅修计算机科学；本科期间，我是 <a href="https://engine.eng.ufl.edu">ENGINE</a>（Engineering National Graduate Institutional Name Exchange）成员，参与 <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947135">美国国家科学基金会（NSF）1947135</a> 资助的 <a href="https://cs.illinois.edu/research/undergraduate-research">本科生科研计划（REU）</a>，导师为<a href="http://tonghanghang.org">童行行（Hanghang Tong）教授</a>。'>Prior to that, I graduated from a dual-degree program jointly held by <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> and the <a href="https://illinois.edu">University of Illinois at Urbana-Champaign</a>, with major in Electrical Engineering and minor in Computer Science, where I was a member of <a href="https://engine.eng.ufl.edu">Engineering National Graduate Institutional Name Exchange (ENGINE)</a>, a participant of <a href="https://cs.illinois.edu/research/undergraduate-research">Research Experiences for Undergraduate (REU)</a> supported by <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1947135">National Science Foundation (NSF) 1947135</a>, advised by <a href="http://tonghanghang.org">Prof. Hanghang Tong</a>.</p>
+      <p data-zh="求学期间，我曾在蚂蚁集团担任算法工程师实习生，从事大模型在安全与风控领域（如反洗钱 AML）的应用。">Previously, I was an Algorithm Engineer Intern at Ant Group, where I worked on the application of Large Language Models (LLM) in security and risk management domains such as Anti-Money Laundering (AML).</p>
+      <p class="interests" data-zh='<b>研究兴趣：</b>强化学习与智能体系统，尤其是递归自我提升（RSI）。'><b>Research Interests:</b> Reinforcement learning and agent systems, especially recursive self-improvement (RSI).</p>
+      <div class="tag-row" aria-label="Focus areas">
+        <span>RLHF</span><span>GRPO / DAPO</span><span>Multi-agent</span><span>RSI</span><span>Agent evaluation</span>
+      </div>
+    </section>
 
-			<section class="section" id="news">
-				<h2 class="section-title" data-zh="最新动态">Latest News</h2>
-				<ul class="news-list">
-					<li class="news-item"><span class="news-date" data-zh="2025年5月">May 2025</span><span class="news-text" data-zh="加入华为2012实验室担任算法工程师 II，先做 RLHF 后训练，后转向智能体系统。">Joined Huawei 2012 Laboratory as an Algorithm Engineer II, first on RLHF post-training and later on agent systems.</span></li>
-					<li class="news-item"><span class="news-date" data-zh="2024年12月">Dec 2024</span><span class="news-text" data-zh="从加州大学圣地亚哥分校计算机科学专业硕士毕业，提前两个季度完成学业。">Graduated from UC San Diego with an M.S. in Computer Science, two quarters ahead of schedule.</span></li>
-					<li class="news-item"><span class="news-date" data-zh="2023年6月">Jun 2023</span><span class="news-text" data-zh="加入蚂蚁集团担任算法工程师实习生，从事大模型在反洗钱（AML）领域的应用。">Joined Ant Group as an Algorithm Engineer Intern, working on LLM applications for anti-money laundering (AML).</span></li>
-					<li class="news-item"><span class="news-date" data-zh="2023年4月">Apr 2023</span><span class="news-text" data-zh="获加州大学圣地亚哥分校计算机科学硕士项目录取。">Admitted to the M.S. program in Computer Science at UC San Diego.</span></li>
-				</ul>
-			</section>
+    <section class="section" id="news">
+      <h2 class="section-title" data-zh="最新动态">Latest News</h2>
+      <ul class="news-list">
+        <li class="news-item"><span class="news-date" data-zh="2026">2026</span><span class="news-text" data-zh="获华为 2012 之星奖、昇腾基础软件 STDT 优秀项目交付奖。">Received the Huawei 2012 Star Award and the STDT Outstanding Project Delivery Award from Ascend Basic Software.</span></li>
+        <li class="news-item"><span class="news-date" data-zh="2025年5月">May 2025</span><span class="news-text" data-zh="加入华为 2012 实验室担任算法工程师 II，先做 RLHF 后训练，后转向智能体系统。">Joined Huawei 2012 Laboratory as an Algorithm Engineer II, first on RLHF post-training and later on agent systems.</span></li>
+        <li class="news-item"><span class="news-date" data-zh="2024年12月">Dec 2024</span><span class="news-text" data-zh="从加州大学圣地亚哥分校计算机科学专业硕士毕业，提前两个季度完成学业。">Graduated from UC San Diego with an M.S. in Computer Science, two quarters ahead of schedule.</span></li>
+        <li class="news-item"><span class="news-date" data-zh="2023年6月">Jun 2023</span><span class="news-text" data-zh="加入蚂蚁集团担任算法工程师实习生，从事大模型在反洗钱（AML）领域的应用。">Joined Ant Group as an Algorithm Engineer Intern, working on LLM applications for anti-money laundering (AML).</span></li>
+        <li class="news-item"><span class="news-date" data-zh="2023年4月">Apr 2023</span><span class="news-text" data-zh="获加州大学圣地亚哥分校计算机科学硕士项目录取。">Admitted to the M.S. program in Computer Science at UC San Diego.</span></li>
+      </ul>
+    </section>
 
-			<section class="section" id="experience">
-				<h2 class="section-title" data-zh="工作经历">Work Experience</h2>
+    <section class="section" id="experience">
+      <h2 class="section-title" data-zh="工作经历">Work Experience</h2>
 
-				<div class="job">
-					<div class="job-head">
-						<span class="job-role" data-zh="算法工程师 II">Algorithm Engineer II</span>
-						<span class="job-date" data-zh="2025年5月 – 至今">May 2025 – Present</span>
-					</div>
-					<div class="job-org" data-zh="华为2012实验室">Huawei 2012 Laboratory</div>
-					<div class="job-project" data-zh="大规模 RLHF 训练">Large-Scale RLHF Training</div>
-					<ul>
-						<li data-zh="在昇腾 NPU 集群上实现 GRPO、DAPO 算法的核心模块，用于大规模 RLHF 训练。">Implemented core modules of the GRPO and DAPO algorithms for large-scale RLHF training on Ascend NPU clusters.</li>
-						<li data-zh="负责大模型的 GRPO 训练与调优，包括针对长思维链样本的动态序列打包，以及大规模集群上的稳定性验证。">Responsible for GRPO training and tuning of large models, including dynamic sequence packing for long chain-of-thought samples and stability validation at cluster scale.</li>
-					</ul>
-					<div class="job-project" data-zh="面向科学发现的智能体系统">Agent System for Scientific Discovery</div>
-					<ul>
-						<li data-zh="参与科学发现智能体框架的架构设计与核心开发；实现其基于 DAG 的可插拔多智能体调度器，节点类型与依赖关系均可配置。">Participated in the architecture design and core development of a scientific-discovery agent framework; built its pluggable DAG-based multi-agent scheduler with configurable node types and dependencies.</li>
-					<li data-zh="在框架内构建 RSI 闭环：智能体在任务数据集上通过 rollout、失败驱动的技能归纳与 top-K frontier 选择，持续演进自己的技能库；遵循严格的 train/validation/test 划分纪律，演进出的技能库全部版本化、可审计。">Building the RSI loop into the framework: agents evolve their own skill libraries on task datasets through rollout, failure-driven skill induction, and top-K frontier selection, under strict train/validation/test discipline; every evolved library is versioned and auditable.</li>
-					<li data-zh="探索开放式演进：在树搜索之外引入岛屿种群与 MAP-Elites 质量多样性档案；下一步是自生成评估任务，让智能体自主规划自身的改进课程。">Exploring open-ended evolution, with island populations and MAP-Elites quality-diversity archives alongside tree search; next, self-generated evaluation tasks so agents can drive their own curriculum.</li>
-					</ul>
-				</div>
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role" data-zh="算法工程师 II">Algorithm Engineer II</span>
+          <span class="job-date" data-zh="2025年5月 – 至今">May 2025 – Present</span>
+        </div>
+        <div class="job-org" data-zh="华为 2012 实验室">Huawei 2012 Laboratory</div>
+        <div class="job-project" data-zh="大规模 RLHF 训练">Large-Scale RLHF Training</div>
+        <ul>
+          <li data-zh="在昇腾 NPU 集群上实现 GRPO、DAPO 算法的核心模块，用于大规模 RLHF 训练。">Implemented core modules of the GRPO and DAPO algorithms for large-scale RLHF training on Ascend NPU clusters.</li>
+          <li data-zh="负责大模型的 GRPO 训练与调优，包括针对长思维链样本的动态序列打包，以及大规模集群上的稳定性验证。">Responsible for GRPO training and tuning of large models, including dynamic sequence packing for long chain-of-thought samples and stability validation at cluster scale.</li>
+        </ul>
+        <div class="job-project" data-zh="面向科学发现的智能体系统">Agent System for Scientific Discovery</div>
+        <ul>
+          <li data-zh="参与科学发现智能体框架的架构设计与核心开发；实现其基于 DAG 的可插拔多智能体调度器，节点类型与依赖关系均可配置。">Participated in the architecture design and core development of a scientific-discovery agent framework; built its pluggable DAG-based multi-agent scheduler with configurable node types and dependencies.</li>
+          <li data-zh="在框架内构建 RSI 闭环：智能体在任务数据集上通过 rollout、失败驱动的技能归纳与 top-K frontier 选择，持续演进自己的技能库；遵循严格的 train/validation/test 划分纪律，演进出的技能库全部版本化、可审计。">Building the RSI loop into the framework: agents evolve their own skill libraries on task datasets through rollout, failure-driven skill induction, and top-K frontier selection, under strict train/validation/test discipline; every evolved library is versioned and auditable.</li>
+          <li data-zh="探索开放式演进：在树搜索之外引入岛屿种群与 MAP-Elites 质量多样性档案；下一步是自生成评估任务，让智能体自主规划自身的改进课程。">Exploring open-ended evolution, with island populations and MAP-Elites quality-diversity archives alongside tree search; next, self-generated evaluation tasks so agents can drive their own curriculum.</li>
+        </ul>
+      </div>
 
-				<div class="job">
-					<div class="job-head">
-						<span class="job-role" data-zh="算法工程师实习生">Algorithm Engineer Intern</span>
-						<span class="job-date" data-zh="2023年6月 – 9月">Jun 2023 – Sep 2023</span>
-					</div>
-					<div class="job-org" data-zh="蚂蚁集团">Ant Group</div>
-					<ul>
-						<li data-zh="基于 AntGLM 与 LangChain 构建金融领域智能体原型：ReAct 风格推理、BM25 与向量检索混合的多路 RAG、多轮工具调用。">Built a financial agent prototype on AntGLM and LangChain: ReAct-style reasoning, hybrid BM25/embedding retrieval, and multi-turn tool calling.</li>
-						<li data-zh="用 LoRA 微调 AntGLM，用于反洗钱（AML）异常检测。">Fine-tuned AntGLM with LoRA for anti-money-laundering (AML) anomaly detection.</li>
-					</ul>
-				</div>
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role" data-zh="算法工程师实习生">Algorithm Engineer Intern</span>
+          <span class="job-date" data-zh="2023年6月 – 9月">Jun 2023 – Sep 2023</span>
+        </div>
+        <div class="job-org" data-zh="蚂蚁集团">Ant Group</div>
+        <ul>
+          <li data-zh="基于 AntGLM 与 LangChain 构建金融领域智能体原型：ReAct 风格推理、BM25 与向量检索混合的多路 RAG、多轮工具调用。">Built a financial agent prototype on AntGLM and LangChain: ReAct-style reasoning, hybrid BM25/embedding retrieval, and multi-turn tool calling.</li>
+          <li data-zh="用 LoRA 微调 AntGLM，用于反洗钱（AML）异常检测。">Fine-tuned AntGLM with LoRA for anti-money-laundering (AML) anomaly detection.</li>
+        </ul>
+      </div>
 
-				<div class="job">
-					<div class="job-head">
-						<span class="job-role" data-zh="人工智能实习生">AI Engineer Intern</span>
-						<span class="job-date" data-zh="2022年11月 – 2023年2月">Nov 2022 – Feb 2023</span>
-					</div>
-					<div class="job-org" data-zh="道富银行（State Street）">State Street</div>
-					<ul>
-						<li data-zh="设计人工智能自动对账系统的对账算法。">Designed the reconciliation algorithms for an AI-based automatic reconciliation system.</li>
-					</ul>
-				</div>
-			</section>
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role" data-zh="人工智能实习生">AI Engineer Intern</span>
+          <span class="job-date" data-zh="2022年11月 – 2023年2月">Nov 2022 – Feb 2023</span>
+        </div>
+        <div class="job-org" data-zh="道富银行（State Street）">State Street</div>
+        <ul>
+          <li data-zh="设计人工智能自动对账系统的对账算法。">Designed the reconciliation algorithms for an AI-based automatic reconciliation system.</li>
+        </ul>
+      </div>
+    </section>
 
-			<section class="section" id="research">
-				<h2 class="section-title" data-zh="研究经历">Research Experience</h2>
+    <section class="section" id="research">
+      <h2 class="section-title" data-zh="研究经历">Research Experience</h2>
 
-				<div class="research-item">
-					<div class="research-head">
-						<span class="research-title" data-zh="知识图谱问答中的主动学习">Active Learning on Knowledge Graphs Question Answering</span>
-						<span class="research-date" data-zh="2022年夏">Summer 2022</span>
-					</div>
-					<div class="research-links">
-						<a href="https://cs.illinois.edu/research/undergraduate-research/summer-research-experience-undergraduates/participants/ke-xu">video</a>
-					</div>
-					<div class="research-meta" data-zh='导师：<a href="http://tonghanghang.org">Prof. Hanghang Tong</a>（伊利诺伊大学厄巴纳-香槟分校）'>Advisor: <a href="http://tonghanghang.org">Prof. Hanghang Tong</a>, University of Illinois at Urbana-Champaign</div>
-					<p class="research-desc" data-zh="面向知识图谱问答（KGQA）设计融合图中心性、信息密度与节点不确定性的主动学习策略。">Designed an active-learning strategy for KGQA that fuses graph centrality, information density, and node uncertainty.</p>
-				</div>
+      <div class="research-item">
+        <div class="research-head">
+          <span class="research-title" data-zh="知识图谱问答中的主动学习">Active Learning on Knowledge Graphs Question Answering</span>
+          <span class="research-date" data-zh="2022年夏">Summer 2022</span>
+        </div>
+        <div class="research-links"><a href="https://cs.illinois.edu/research/undergraduate-research/summer-research-experience-undergraduates/participants/ke-xu">video</a></div>
+        <div class="research-meta" data-zh='导师：<a href="http://tonghanghang.org">Prof. Hanghang Tong</a>（伊利诺伊大学厄巴纳-香槟分校）'>Advisor: <a href="http://tonghanghang.org">Prof. Hanghang Tong</a>, University of Illinois at Urbana-Champaign</div>
+        <p class="research-desc" data-zh="面向知识图谱问答（KGQA）设计融合图中心性、信息密度与节点不确定性的主动学习策略。">Designed an active-learning strategy for KGQA that fuses graph centrality, information density, and node uncertainty.</p>
+      </div>
 
-				<div class="research-item">
-					<div class="research-head">
-						<span class="research-title" data-zh="面向安全的反射式抽象状态机探索">Exploration of Reflective ASMs for Security</span>
-						<span class="research-date" data-zh="2021年4月 – 2022年4月">Apr 2021 – Apr 2022</span>
-					</div>
-					<div class="research-links">
-						<a href="https://www.researchgate.net/publication/370783594_Exploration_of_Reflective_ASMs_for_Security">paper</a>
-					</div>
-					<div class="research-meta" data-zh='导师：<a href="https://scholar.google.com/citations?user=e74FobUAAAAJ&amp;hl=en">Prof. Klaus-Dieter Schewe</a>（浙江大学）'>Advisor: <a href="https://scholar.google.com/citations?user=e74FobUAAAAJ&amp;hl=en">Prof. Klaus-Dieter Schewe</a>, Zhejiang University</div>
-					<p class="research-desc" data-zh="探索反射式抽象状态机（Reflective ASM）在安全性方面的应用。">Investigated reflective Abstract State Machines (ASMs) for security.</p>
-				</div>
+      <div class="research-item">
+        <div class="research-head">
+          <span class="research-title" data-zh="面向安全的反射式抽象状态机探索">Exploration of Reflective ASMs for Security</span>
+          <span class="research-date" data-zh="2021年4月 – 2022年4月">Apr 2021 – Apr 2022</span>
+        </div>
+        <div class="research-links"><a href="https://www.researchgate.net/publication/370783594_Exploration_of_Reflective_ASMs_for_Security">paper</a></div>
+        <div class="research-meta" data-zh='导师：<a href="https://scholar.google.com/citations?user=e74FobUAAAAJ&amp;hl=en">Prof. Klaus-Dieter Schewe</a>（浙江大学）'>Advisor: <a href="https://scholar.google.com/citations?user=e74FobUAAAAJ&amp;hl=en">Prof. Klaus-Dieter Schewe</a>, Zhejiang University</div>
+        <p class="research-desc" data-zh="探索反射式抽象状态机（Reflective ASM）在安全性方面的应用。">Investigated reflective Abstract State Machines (ASMs) for security.</p>
+      </div>
 
-				<div class="research-item">
-					<div class="research-head">
-						<span class="research-title" data-zh="AI 辅助心理咨询对话机器人">AI-Assisted Psychological Counseling Chatbot</span>
-						<span class="research-date" data-zh="2021年夏">Summer 2021</span>
-					</div>
-					<div class="research-links">
-						<a href="http://www.xinhuanet.com/english/2021-07/16/c_1310064630.htm">news</a>
-					</div>
-					<div class="research-meta" data-zh='导师：<a href="https://dll-wu.github.io">Dr. Zhenzhong Lan</a>（西湖大学）'>Advisor: <a href="https://dll-wu.github.io">Dr. Zhenzhong Lan</a>, Westlake University</div>
-					<p class="research-desc" data-zh="构建基于黑白名单规则的安全分类与基于知识图谱的意图、情绪识别，用于心理咨询对话场景。">Built blacklist/whitelist safety classification and knowledge-graph-based intent and emotion recognition for counseling dialogue.</p>
-				</div>
-			</section>
+      <div class="research-item">
+        <div class="research-head">
+          <span class="research-title" data-zh="AI 辅助心理咨询对话机器人">AI-Assisted Psychological Counseling Chatbot</span>
+          <span class="research-date" data-zh="2021年夏">Summer 2021</span>
+        </div>
+        <div class="research-links"><a href="http://www.xinhuanet.com/english/2021-07/16/c_1310064630.htm">news</a></div>
+        <div class="research-meta" data-zh='导师：<a href="https://dll-wu.github.io">Dr. Zhenzhong Lan</a>（西湖大学）'>Advisor: <a href="https://dll-wu.github.io">Dr. Zhenzhong Lan</a>, Westlake University</div>
+        <p class="research-desc" data-zh="构建基于黑白名单规则的安全分类与基于知识图谱的意图、情绪识别，用于心理咨询对话场景。">Built blacklist/whitelist safety classification and knowledge-graph-based intent and emotion recognition for counseling dialogue.</p>
+      </div>
+    </section>
 
-			<section class="section" id="education">
-				<h2 class="section-title" data-zh="教育背景">Education</h2>
-				<ul class="plain-list">
-					<li data-zh='<b>计算机科学硕士</b>，加州大学圣地亚哥分校（UCSD）— <span class="muted">2023年9月 – 2024年12月</span>'><b>M.S. in Computer Science</b>, University of California San Diego (UCSD) — <span class="muted">Sep 2023 – Dec 2024</span></li>
-					<li data-zh='<b>电气工程理学学士</b>（辅修计算机科学），伊利诺伊大学厄巴纳-香槟分校（UIUC），与浙大联合培养双学位项目 — <span class="muted">2021年9月 – 2023年5月</span>'><b>B.S. in Electrical Engineering</b> (minor in Computer Science), University of Illinois at Urbana-Champaign (UIUC), dual-degree program with ZJU — <span class="muted">Sep 2021 – May 2023</span></li>
-					<li data-zh='<b>电气工程及其自动化工学学士</b>，浙江大学（ZJU）— <span class="muted">2019年9月 – 2023年7月</span>'><b>B.Eng. in Electrical Engineering and Automation</b>, Zhejiang University (ZJU) — <span class="muted">Sep 2019 – Jul 2023</span></li>
-				</ul>
-			</section>
+    <section class="section" id="education">
+      <h2 class="section-title" data-zh="教育背景">Education</h2>
+      <ul class="plain-list">
+        <li data-zh='<b>计算机科学硕士</b>，加州大学圣地亚哥分校（UCSD）— <span class="muted">2023年9月 – 2024年12月</span>'><b>M.S. in Computer Science</b>, University of California San Diego (UCSD) — <span class="muted">Sep 2023 – Dec 2024</span></li>
+        <li data-zh='<b>电气工程理学学士</b>（辅修计算机科学），伊利诺伊大学厄巴纳-香槟分校（UIUC），与浙大联合培养双学位项目 — <span class="muted">2021年9月 – 2023年5月</span>'><b>B.S. in Electrical Engineering</b> (minor in Computer Science), University of Illinois at Urbana-Champaign (UIUC), dual-degree program with ZJU — <span class="muted">Sep 2021 – May 2023</span></li>
+        <li data-zh='<b>电气工程及其自动化工学学士</b>，浙江大学（ZJU）— <span class="muted">2019年9月 – 2023年7月</span>'><b>B.Eng. in Electrical Engineering and Automation</b>, Zhejiang University (ZJU) — <span class="muted">Sep 2019 – Jul 2023</span></li>
+      </ul>
+    </section>
 
-			<section class="section" id="honors">
-				<h2 class="section-title" data-zh="荣誉奖项">Honors &amp; Awards</h2>
-				<ul class="plain-list">
-					<li data-zh='<b>2012之星奖</b>（华为）— 2026'><b>2012 Star Award</b>, Huawei — 2026</li>
-					<li data-zh='<b>STDT 优秀项目交付奖</b>（昇腾基础软件）— 2026'><b>STDT Outstanding Project Delivery Award</b>, Ascend Basic Software — 2026</li>
-					<li data-zh='<b>美国国家科学基金会 REU 奖学金</b> — 2022'><b>NSF REU Scholarship</b>, National Science Foundation — 2022</li>
-					<li data-zh='<b>MCM/ICM 国际大学生数学建模竞赛 Meritorious Winner</b>（前 7%，共 10,053 队）— 2021'><b>MCM/ICM Meritorious Winner</b> (Top 7% of 10,053 teams) — 2021</li>
-				</ul>
-			</section>
+    <section class="section" id="honors">
+      <h2 class="section-title" data-zh="荣誉奖项">Honors &amp; Awards</h2>
+      <ul class="plain-list">
+        <li data-zh='<b>2012 之星奖</b>（华为）— 2026'><b>2012 Star Award</b>, Huawei — 2026</li>
+        <li data-zh='<b>STDT 优秀项目交付奖</b>（昇腾基础软件）— 2026'><b>STDT Outstanding Project Delivery Award</b>, Ascend Basic Software — 2026</li>
+        <li data-zh='<b>美国国家科学基金会 REU 奖学金</b> — 2022'><b>NSF REU Scholarship</b>, National Science Foundation — 2022</li>
+        <li data-zh='<b>MCM/ICM 国际大学生数学建模竞赛 Meritorious Winner</b>（前 7%，共 10,053 队）— 2021'><b>MCM/ICM Meritorious Winner</b> (Top 7% of 10,053 teams) — 2021</li>
+      </ul>
+    </section>
 
-			<section class="section" id="travel">
-				<h2 class="section-title" data-zh="旅行足迹">Travel</h2>
-				<p class="travel-note" data-zh='工作之外，我爱探索世界 —— <b>已到访 <span id="visited-count">0</span> 个国家</b>，未完待续。 <span class="map-legend"><span class="legend-chip visited"></span> 已到访&nbsp;&nbsp;<span class="legend-chip planned"></span> 计划中&nbsp;&nbsp;<span class="legend-chip not-yet"></span> 未到访</span>'>Away from the terminal, I love exploring the world — <b><span id="visited-count">0</span> countries</b> and counting. <span class="map-legend"><span class="legend-chip visited"></span> visited&nbsp;&nbsp;<span class="legend-chip planned"></span> planned&nbsp;&nbsp;<span class="legend-chip not-yet"></span> not yet</span></p>
-				<div class="travel-progress">
-					<div class="progress-track"><div class="progress-fill" id="travel-progress-fill"></div></div>
-					<span class="progress-label" id="travel-progress-label"></span>
-				</div>
-				<div id="travel-map" role="region" aria-label="World map of visited countries / 已到访国家世界地图"></div>
-				<details class="travel-details">
-					<summary data-zh='完整清单 — 已到访 <span id="visited-summary">0</span> / <span id="total-count">0</span> 个国家'>Full checklist — <span id="visited-summary">0</span> of <span id="total-count">0</span> countries visited</summary>
-					<ul class="travel-list" id="travel-list"></ul>
-				</details>
-			</section>
+    <section class="section" id="travel">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-zh="旅行足迹">Travel</h2>
+          <p class="section-kicker" data-zh="工作之外，我爱探索世界。地图和清单由控制台实时更新。">Away from the terminal, I love exploring the world. The map and checklist are updated live from the console.</p>
+        </div>
+        <div class="travel-live">
+          <span class="live-dot"></span>
+          <span id="travel-source">live data</span>
+          <span class="sep">·</span>
+          <span data-zh="更新于">Updated</span> <span id="travel-updated">—</span>
+        </div>
+      </div>
 
-			<section class="section" id="gallery">
-				<h2 class="section-title" data-zh="相册">Gallery</h2>
-				<p class="gallery-note" data-zh="旅途中拍下的照片。">Photos from my travels.</p>
-				<!-- [TODO] Add photos under files/imgs/gallery/, then copy the figure template below for each one -->
-				<div class="gallery-grid">
-					<!--
-					<figure class="gallery-item">
-						<img src="files/imgs/gallery/example.jpg" alt="Place" loading="lazy">
-						<figcaption>Place — Country, Year</figcaption>
-					</figure>
-					-->
-					<p class="gallery-empty" data-zh="功能维护中">Under maintenance</p>
-				</div>
-			</section>
+      <div class="travel-stats">
+        <div class="travel-stat"><b id="visited-count">0</b><span data-zh="已到访">Visited</span></div>
+        <div class="travel-stat"><b id="planned-count">0</b><span data-zh="计划中">Planned</span></div>
+        <div class="travel-stat"><b id="travel-progress-pct">0%</b><span data-zh="世界进度">World</span></div>
+        <div class="travel-stat"><b id="total-count">0</b><span data-zh="国家总数">Countries</span></div>
+      </div>
+      <div class="travel-progress">
+        <div class="progress-track"><div class="progress-fill" id="travel-progress-fill"></div></div>
+        <span class="progress-label" id="travel-progress-label"></span>
+      </div>
 
-		</div>
+      <div class="travel-toolbar">
+        <label class="travel-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="travel-search" type="search" autocomplete="off" placeholder="Search countries / 搜索国家" data-zh-placeholder="搜索国家 / Search countries" aria-label="Search countries" data-zh-aria-label="搜索国家" />
+        </label>
+        <div class="filter-chips" data-travel-filters role="group" aria-label="Filter countries">
+          <button type="button" class="filter-chip active" data-travel-filter="all" aria-pressed="true"><span data-zh="全部">All</span> <span class="count">0</span></button>
+          <button type="button" class="filter-chip" data-travel-filter="visited" aria-pressed="false"><span data-zh="已到访">Visited</span> <span class="count">0</span></button>
+          <button type="button" class="filter-chip" data-travel-filter="planned" aria-pressed="false"><span data-zh="计划中">Planned</span> <span class="count">0</span></button>
+          <button type="button" class="filter-chip" data-travel-filter="unvisited" aria-pressed="false"><span data-zh="未到访">Not yet</span> <span class="count">0</span></button>
+        </div>
+        <button id="travel-refresh" class="icon-btn" type="button" aria-label="Refresh travel data" data-zh-aria-label="刷新旅行数据" title="Refresh / 刷新">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
+        </button>
+      </div>
 
-		<button id="back-to-top" type="button" title="Back to top / 回到顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+      <div class="travel-map-wrap">
+        <div id="travel-map" role="region" aria-label="World map of visited countries / 已到访国家世界地图"></div>
+        <div class="map-legend" aria-hidden="true">
+          <span><i class="legend-chip visited"></i><span data-zh="已到访">Visited</span></span>
+          <span><i class="legend-chip planned"></i><span data-zh="计划中">Planned</span></span>
+          <span><i class="legend-chip not-yet"></i><span data-zh="未到访">Not yet</span></span>
+        </div>
+        <p class="map-hint" data-zh="点击国家查看详情，滚轮缩放已关闭。">Click a country to focus it. Scroll-wheel zoom is off by default.</p>
+      </div>
 
-		<footer class="footer wrapper">
-			<nav class="nav">
-				<div data-zh='&copy; 2026 许可 | 最后更新：2026年9月 | <a href="https://github.com/hadisinaee/avicenna">Avicenna</a> 主题 | 基于 <a href="https://gohugo.io">Hugo</a> 构建'>&copy; 2026 Ke Xu | Last updated: September 2026 | <a href="https://github.com/hadisinaee/avicenna">Avicenna Theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
-			</nav>
-		</footer>
+      <details class="travel-details">
+        <summary data-zh='完整清单 — 已到访 <span id="visited-summary">0</span> / <span id="total-count-summary">0</span> 个国家'>Full checklist — <span id="visited-summary">0</span> of <span id="total-count-summary">0</span> countries visited</summary>
+        <ul class="travel-list" id="travel-list"></ul>
+      </details>
+      <noscript><p class="muted">Enable JavaScript to load the map and gallery.</p></noscript>
+    </section>
 
-		<script src="js/countries-list.js"></script>
-		<script src="js/i18n.js"></script>
-		<script src="js/travel.js"></script>
-		<script src="js/ui.js"></script>
-		<!--<a href="https://clustrmaps.com/site/1bkk6"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=aPC5Is3ZSt-eAX7o4ovrUOEFy19lC0TpBOmqXthLGsU&cl=ffffff" /></a> -->
-		<!--<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dfdde0&w=222&t=n&d=G7NOG9OyvS_--aO1E41KIFjz_0sLub4wvM_3ktSxaLo&co=ffffff&cmo=c85a5f&cmn=aa0000&ct=cdd4d9'></script> -->
-		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dfdde0&w=222&t=n&d=aPC5Is3ZSt-eAX7o4ovrUOEFy19lC0TpBOmqXthLGsU&co=ffffff&cmo=c85a5f&cmn=aa0000&ct=cdd4d9'></script>
-	</body>
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-zh="相册">Gallery</h2>
+          <p class="section-kicker" data-zh="旅途中拍下的照片，由控制台直接上传和管理。">Photos from my travels, uploaded and managed from the console.</p>
+        </div>
+        <div class="gallery-meta"><span id="gallery-count">0</span> <span data-zh="张照片">photos</span> <span class="sep">·</span> <span data-zh="更新于">Updated</span> <span id="gallery-updated">—</span></div>
+      </div>
+      <div id="gallery-filters" class="filter-chips" role="group" aria-label="Filter photos by year" hidden></div>
+      <div class="gallery-grid" id="gallery-grid">
+        <p class="gallery-empty" data-zh="照片正在整理中，稍后再来看看。">Photos are being curated. Check back soon.</p>
+      </div>
+    </section>
+  </main>
 
-	
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>&copy; 2026 Ke Xu <span class="sep">·</span> <a href="https://hugoxk.online">HUGOXK LAB</a> <span class="sep">·</span> <a href="blog.html" data-zh="博客">Blog</a> <span class="sep">·</span> <a href="https://github.com/HugoXK/hugoxk.github.io">Source</a></div>
+      <div class="footer-note" data-zh="使用原生 HTML、CSS 和 JavaScript 构建。">Built with plain HTML, CSS, and JavaScript.</div>
+    </div>
+  </footer>
+</div>
+
+<button id="back-to-top" type="button" aria-label="Back to top / 回到顶部" title="Back to top / 回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/site-config.js"></script>
+<script src="js/countries-list.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/travel.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/ui.js"></script>
+</body>
 </html>
