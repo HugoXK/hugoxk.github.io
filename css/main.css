@@ -227,7 +227,8 @@ main { display: block; }
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 10px 16px;
 }
 
 .title-block { min-width: 0; }
@@ -309,13 +310,13 @@ main { display: block; }
   50% { opacity: 1; }
 }
 
-.header-place { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; }
 
 .header-tools {
   display: flex;
   align-items: center;
   gap: 8px;
   flex: none;
+  margin-left: auto;
 }
 
 .icon-btn {
@@ -515,6 +516,8 @@ main { counter-reset: section; }
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), transparent);
 }
+
+.section-title.no-index::before { display: none; }
 
 .section-title {
   display: flex;
@@ -854,47 +857,6 @@ main { counter-reset: section; }
   white-space: nowrap;
 }
 
-.travel-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-
-.travel-search {
-  position: relative;
-  flex: 1 1 220px;
-  min-width: 190px;
-}
-
-.travel-search svg {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  width: 15px;
-  height: 15px;
-  transform: translateY(-50%);
-  color: var(--muted-2);
-  pointer-events: none;
-}
-
-.travel-search input {
-  width: 100%;
-  height: 38px;
-  padding: 0 12px 0 34px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-2);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  outline: none;
-}
-
-.travel-search input::placeholder { color: var(--muted-2); }
-.travel-search input:focus { border-color: var(--accent); background: var(--surface); }
-
 .filter-chips {
   display: flex;
   align-items: center;
@@ -933,6 +895,9 @@ main { counter-reset: section; }
 
 .filter-chip.active .count { color: var(--accent-ink); }
 
+)
+.travel-live .icon-btn { width: 30px; height: 30px; }
+.travel-live .icon-btn svg { width: 14px; height: 14px; }
 #travel-refresh { flex: none; }
 #travel-refresh[disabled] { opacity: 0.5; cursor: wait; }
 
@@ -1054,117 +1019,9 @@ main { counter-reset: section; }
 }
 .leaflet-control-attribution a { color: var(--muted) !important; }
 
-.travel-details { margin-top: 14px; }
-
-.travel-details summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-2);
-  color: var(--muted);
-  font-size: 0.78rem;
-  cursor: pointer;
-  list-style: none;
-}
-
-.travel-details summary::-webkit-details-marker { display: none; }
-.travel-details summary:hover { color: var(--accent); border-color: var(--accent); }
-.travel-details[open] summary { margin-bottom: 12px; }
-
-.section .travel-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 2px 16px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0.8rem;
-}
-
-.section .travel-list li {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin: 0;
-  padding: 4px 0;
-  color: var(--muted);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.section .travel-list li[data-name]:hover { color: var(--accent); }
-
-.travel-list li.visited { color: var(--accent-ink); font-weight: 600; }
-.travel-list li.planned { color: var(--accent); }
-
-.travel-group {
-  grid-column: 1 / -1;
-  margin: 12px 0 4px !important;
-  color: var(--muted-2) !important;
-  font-family: var(--mono);
-  font-size: 0.62rem !important;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: default !important;
-}
-
-.travel-group:first-child { margin-top: 0 !important; }
-
-.travel-list .chk {
-  position: relative;
-  flex: none;
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  border: 1.5px solid var(--line-strong);
-  border-radius: 4px;
-  background: var(--surface);
-}
-
-.travel-list li.visited .chk {
-  border-color: var(--accent);
-  background: var(--accent);
-}
-
-.travel-list li.visited .chk::after {
-  content: "";
-  position: absolute;
-  left: 3.5px;
-  top: 1px;
-  width: 4px;
-  height: 7px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.travel-list li.planned .chk {
-  border-color: var(--accent);
-  border-style: dashed;
-  background: var(--accent-soft);
-}
-
-.travel-list .cname { min-width: 0; }
-
-.travel-list .vdate {
-  margin-left: auto;
-  color: var(--muted-2);
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  white-space: nowrap;
-}
-
-.travel-empty {
-  grid-column: 1 / -1;
-  color: var(--muted-2) !important;
-  font-size: 0.84rem;
-  cursor: default !important;
-}
-
 /* ---------- gallery ---------- */
+#gallery-filters { margin: 0 0 12px; }
+
 .gallery-grid {
   columns: 3 240px;
   column-gap: 14px;
@@ -1248,6 +1105,8 @@ main { counter-reset: section; }
 }
 
 .gallery-empty {
+  column-span: all;
+  width: 100%;
   grid-column: 1 / -1;
   margin: 0;
   padding: 34px 20px;
@@ -1415,6 +1274,7 @@ body.lightbox-open { overflow: hidden; }
   color: var(--ink-2);
   font-size: 0.98rem;
   line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 
 .post-body h1,
@@ -1615,13 +1475,22 @@ body.lightbox-open { overflow: hidden; }
   .header { padding: 22px; border-radius: 20px; }
   .header-layout { flex-direction: column; align-items: flex-start; gap: 18px; }
   .avatar-wrap { flex-basis: 112px; width: 112px; height: 112px; }
-  .header-tools { position: absolute; right: 0; top: 0; }
   .header .site-title { font-size: 2rem; }
   .header .site-title .name_image { height: 30px; }
   .header .position { font-size: 0.95rem; }
   .contact-row { gap: 9px; }
   .header .email { font-size: 0.74rem; }
-  .nav-bar { top: 8px; border-radius: 14px; }
+  .nav-bar {
+    top: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 16px;
+    overflow-x: visible;
+  }
+  .nav-bar a { padding: 5px 9px; font-size: 0.78rem; }
+  .nav-bar .nav-external { margin-left: 0; }
   .section { padding: 22px 20px; border-radius: 16px; }
   .section::before { left: 20px; }
   .section-title { font-size: 1.35rem; }
@@ -1640,14 +1509,12 @@ body.lightbox-open { overflow: hidden; }
   .cv-sheet { padding: 28px 22px; }
   .cv-head { flex-direction: column; }
   .cv-contact { text-align: left; }
+  .post-body table { display: block; overflow-x: auto; }
 }
 
 @media (max-width: 480px) {
   .header .site-title { font-size: 1.8rem; }
   .header-meta { gap: 7px 10px; }
-  .header-place { display: none; }
-  .travel-toolbar { align-items: stretch; }
-  .travel-search { flex-basis: 100%; }
   .filter-chips { width: 100%; }
   .filter-chip { flex: 1; justify-content: center; }
   .travel-stats { gap: 7px; }
@@ -1665,7 +1532,6 @@ body.lightbox-open { overflow: hidden; }
   .header-tools,
   .skip-link,
   #travel-map,
-  .travel-toolbar,
   .travel-progress,
   .map-legend,
   .map-hint,

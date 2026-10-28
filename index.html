@@ -1,4 +1,4 @@
-<!-- Version:5.0.0 Modify Date:2026-10-28 -->
+<!-- Version:5.1.0 Modify Date:2026-10-28 -->
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -29,11 +29,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="preload" as="image" href="profile.webp" type="image/webp" />
 
 <link rel="stylesheet" href="css/leaflet.css" />
 <link rel="stylesheet" href="css/normalize.css" />
-<link rel="stylesheet" href="css/main.css?v=5" />
+<link rel="stylesheet" href="css/main.css?v=7" />
 
 <script>
 (function () {
@@ -80,13 +79,13 @@
     <div class="header-layout">
       <picture class="avatar-wrap">
         <source srcset="profile-360.webp 360w, profile.webp 720w" sizes="(max-width: 640px) 112px, 148px" type="image/webp" />
-        <img src="profile.jpg" class="profile_image" width="720" height="720" alt="Ke Xu" />
+        <img src="profile.jpg" class="profile_image" width="720" height="720" fetchpriority="high" alt="Ke Xu" />
       </picture>
       <div class="header-info">
         <div class="title-row">
           <div class="title-block">
             <div class="eyebrow">Algorithms · Agents · RSI</div>
-            <h1 class="site-title">Ke Xu <img src="name.png" class="name_image" alt="许可" /></h1>
+            <h1 class="site-title">Ke Xu <img src="name.png" class="name_image" width="772" height="284" alt="许可" /></h1>
           </div>
           <div class="header-tools">
             <div class="lang-switch" role="group" aria-label="Language / 语言">
@@ -102,7 +101,6 @@
         <div class="position" data-zh="算法工程师 II · 华为 2012 实验室">Algorithm Engineer II · Huawei 2012 Laboratory</div>
         <div class="header-meta">
           <span class="status-pill"><span class="status-dot"></span><span data-zh="自主 Agent · 递归自我提升">Autonomous agents · RSI</span></span>
-          <span class="header-place">Shenzhen / Hangzhou</span>
         </div>
         <div class="contact-row">
           <span class="social-icons">
@@ -174,6 +172,24 @@
           <li data-zh="在框架内构建 RSI 闭环：智能体在任务数据集上通过 rollout、失败驱动的技能归纳与 top-K frontier 选择，持续演进自己的技能库；遵循严格的 train/validation/test 划分纪律，演进出的技能库全部版本化、可审计。">Building the RSI loop into the framework: agents evolve their own skill libraries on task datasets through rollout, failure-driven skill induction, and top-K frontier selection, under strict train/validation/test discipline; every evolved library is versioned and auditable.</li>
           <li data-zh="探索开放式演进：在树搜索之外引入岛屿种群与 MAP-Elites 质量多样性档案；下一步是自生成评估任务，让智能体自主规划自身的改进课程。">Exploring open-ended evolution, with island populations and MAP-Elites quality-diversity archives alongside tree search; next, self-generated evaluation tasks so agents can drive their own curriculum.</li>
         </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-role" data-zh="开源贡献者 · RSI 与智能体系统">Open Source Contributor · RSI &amp; Agent Systems</span>
+          <span class="job-date" data-zh="2026 – 至今">2026 – Present</span>
+        </div>
+        <div class="job-org" data-zh="HUGOXK LAB · AgentDescent / FlyBot">HUGOXK LAB · AgentDescent / FlyBot</div>
+        <div class="job-project" data-zh="AgentDescent · 自进化框架">AgentDescent · Self-Evolution Framework</div>
+        <ul>
+          <li data-zh="AgentDescent 的核心贡献者：把 prompt、skill 与代码视为可版本化 artifact，在 held-out 任务上评估候选 diff，只提交有证据的改动；参与冲突合并、验收 gate、RSI 指标与可审计技能库。">Core contributor to AgentDescent, a parallel, asynchronous self-evolution framework: prompts, skills, and code are versioned artifacts; candidate diffs are evaluated on held-out tasks and only evidence-backed changes are committed. Work spans conflict-aware merging, acceptance gates, RSI metrics, and auditable skill libraries.</li>
+          <li data-zh="把自进化看成分布式训练：artifact 是参数，diff 是梯度，合并是优化器步；关注并行 worker 之间冲突编辑的融合与可复现的 held-out 证据。">Treats self-evolution as distributed training: artifacts are parameters, diffs are gradients, and merging is the optimizer step; focuses on fusing conflicting edits from parallel workers and reproducible held-out evidence.</li>
+        </ul>
+        <div class="job-project" data-zh="FlyBot · 面向 RSI 的智能体软件">FlyBot · RSI Agent Software</div>
+        <ul>
+          <li data-zh="FlyBot 的贡献者：一组按角色分工的 Bot 以树状结构拆解工程任务，交付经过风险分级的 CI、review 与 merge queue；它是 AgentDescent 这套 RSI 框架在持续交付场景中的长期运行软件。">Contributor to FlyBot, RSI-oriented agent software: role-scoped bots split engineering work down a tree, with delivery gated by risk-tiered CI, review, and a merge queue. It is the long-lived software counterpart to the AgentDescent RSI framework.</li>
+        </ul>
+        <div class="research-links"><a href="https://github.com/Birfy/agentdescent">AgentDescent ↗</a><a href="https://github.com/ThinkFlowLab/FlyBot">FlyBot ↗</a></div>
       </div>
 
       <div class="job">
@@ -264,6 +280,9 @@
           <span id="travel-source">live data</span>
           <span class="sep">·</span>
           <span data-zh="更新于">Updated</span> <span id="travel-updated">—</span>
+          <button id="travel-refresh" class="icon-btn" type="button" aria-label="Refresh travel data" data-zh-aria-label="刷新旅行数据" title="Refresh / 刷新">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
+          </button>
         </div>
       </div>
 
@@ -278,22 +297,6 @@
         <span class="progress-label" id="travel-progress-label"></span>
       </div>
 
-      <div class="travel-toolbar">
-        <label class="travel-search">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input id="travel-search" type="search" autocomplete="off" placeholder="Search countries / 搜索国家" data-zh-placeholder="搜索国家 / Search countries" aria-label="Search countries" data-zh-aria-label="搜索国家" />
-        </label>
-        <div class="filter-chips" data-travel-filters role="group" aria-label="Filter countries">
-          <button type="button" class="filter-chip active" data-travel-filter="all" aria-pressed="true"><span data-zh="全部">All</span> <span class="count">0</span></button>
-          <button type="button" class="filter-chip" data-travel-filter="visited" aria-pressed="false"><span data-zh="已到访">Visited</span> <span class="count">0</span></button>
-          <button type="button" class="filter-chip" data-travel-filter="planned" aria-pressed="false"><span data-zh="计划中">Planned</span> <span class="count">0</span></button>
-          <button type="button" class="filter-chip" data-travel-filter="unvisited" aria-pressed="false"><span data-zh="未到访">Not yet</span> <span class="count">0</span></button>
-        </div>
-        <button id="travel-refresh" class="icon-btn" type="button" aria-label="Refresh travel data" data-zh-aria-label="刷新旅行数据" title="Refresh / 刷新">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><polyline points="21 3 21 9 15 9"/></svg>
-        </button>
-      </div>
-
       <div class="travel-map-wrap">
         <div id="travel-map" role="region" aria-label="World map of visited countries / 已到访国家世界地图"></div>
         <div class="map-legend" aria-hidden="true">
@@ -304,10 +307,6 @@
         <p class="map-hint" data-zh="点击国家查看详情，滚轮缩放已关闭。">Click a country to focus it. Scroll-wheel zoom is off by default.</p>
       </div>
 
-      <details class="travel-details">
-        <summary data-zh='完整清单 — 已到访 <span id="visited-summary">0</span> / <span id="total-count-summary">0</span> 个国家'>Full checklist — <span id="visited-summary">0</span> of <span id="total-count-summary">0</span> countries visited</summary>
-        <ul class="travel-list" id="travel-list"></ul>
-      </details>
       <noscript><p class="muted">Enable JavaScript to load the map and gallery.</p></noscript>
     </section>
 
@@ -338,11 +337,11 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
 </button>
 
-<script src="js/site-config.js"></script>
-<script src="js/countries-list.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/travel.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/ui.js"></script>
+<script src="js/site-config.js?v=7"></script>
+<script src="js/countries-list.js?v=7"></script>
+<script src="js/i18n.js?v=7"></script>
+<script src="js/travel.js?v=7"></script>
+<script src="js/gallery.js?v=7"></script>
+<script src="js/ui.js?v=7"></script>
 </body>
 </html>

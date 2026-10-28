@@ -1,7 +1,6 @@
-/* Ke Xu - Travel map and checklist.
-   Data source: https://hugoxk.online/data/travel.json (written by the
-   authenticated admin console). Falls back to js/countries-list.js when
-   the network or the remote file is unavailable. */
+/* Ke Xu - Travel map.
+   Data source: data/travel.json (synced from the authenticated console).
+   Falls back to js/countries-list.js when the live file is unavailable. */
 
 (function () {
   "use strict";
@@ -11,8 +10,8 @@
                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var STATUS = { visited: "visited", planned: "planned", unvisited: "unvisited" };
   var FALLBACK = {
-    en: "Map could not be loaded. The checklist below still works.",
-    zh: "地图加载失败，下方清单仍可使用。"
+    en: "Map could not be loaded.",
+    zh: "地图加载失败。"
   };
 
   var state = {
@@ -20,8 +19,6 @@
     byName: {},
     layersByName: {},
     markers: {},
-    filter: "all",
-    query: "",
     updatedAt: null,
     source: "local",
     map: null,
@@ -37,10 +34,7 @@
   }
 
   function cfg() { return window.HUGOXK_SITE || {}; }
-
-  function currentLang() {
-    return (document.documentElement.getAttribute("lang") === "zh") ? "zh" : "en";
-  }
+  function currentLang() { return document.documentElement.getAttribute("lang") === "zh" ? "zh" : "en"; }
 
   function countryName(name) {
     if (currentLang() === "zh" && typeof COUNTRY_ZH !== "undefined") {
@@ -59,12 +53,6 @@
       return (kind === "planned" ? "计划 " : "首次到访 ") + year + "年" + month + "月";
     }
     return (kind === "planned" ? "planned " : "first visited ") + MONTHS_EN[month - 1] + " " + year;
-  }
-
-  function shortMonth(date) {
-    var m = /^(\d{4})-(\d{1,2})$/.exec(date || "");
-    if (!m) { return date || ""; }
-    return currentLang() === "zh" ? (m[1] + "." + m[2]) : (MONTHS_EN[parseInt(m[2], 10) - 1] + " " + m[1]);
   }
 
   function parseChecklist() {
@@ -103,8 +91,9 @@
     var url = cfg().travelUrl;
     if (!url || typeof fetch !== "function") { return Promise.reject(new Error("no endpoint")); }
     var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-    var timer = controller ? setTimeout(function () { controller.abort(); }, 6500) : null;
-    return fetch(url, {
+    var timer = controller ? setTimeout(function () { controller.abort(); }, 8000) : null;
+    var bust = url + (url.indexOf("?") === -1 ? "?" : "&") + "t=" + Date.now();
+    return fetch(bust, {
       cache: "no-store",
       credentials: "omit",
       headers: { Accept: "application/json" },
@@ -140,9 +129,7 @@
     return text;
   }
 
-  function themeIsDark() {
-    return document.documentElement.getAttribute("data-theme") === "dark";
-  }
+  function themeIsDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
 
   function mapColors() {
     if (themeIsDark()) {
@@ -185,96 +172,8 @@
     entries.forEach(function (item) { state.byName[item.name] = item; });
     state.updatedAt = updatedAt || null;
     state.source = source;
-    renderAll();
-  }
-
-  function visibleEntries() {
-    var q = state.query.trim().toLowerCase();
-    return state.entries.filter(function (item) {
-      if (state.filter !== "all" && item.status !== state.filter) { return false; }
-      if (!q) { return true; }
-      return (item.name.toLowerCase().indexOf(q) !== -1) ||
-             (countryName(item.name).toLowerCase().indexOf(q) !== -1);
-    });
-  }
-
-  function sortGroup(list, status) {
-    return list.sort(function (a, b) {
-      if (status === STATUS.visited) {
-        if (a.date && b.date && a.date !== b.date) { return b.date.localeCompare(a.date); }
-        if (a.date && !b.date) { return -1; }
-        if (!a.date && b.date) { return 1; }
-      } else if (status === STATUS.planned) {
-        if (a.date && b.date && a.date !== b.date) { return a.date.localeCompare(b.date); }
-        if (a.date && !b.date) { return -1; }
-        if (!a.date && b.date) { return 1; }
-      }
-      return countryName(a.name).localeCompare(countryName(b.name));
-    });
-  }
-
-  function listRow(item) {
-    var li = document.createElement("li");
-    li.className = item.status;
-    li.setAttribute("data-name", item.name);
-    li.setAttribute("title", currentLang() === "zh" ? "在地图上查看" : "Show on map");
-    var chk = document.createElement("span");
-    chk.className = "chk";
-    chk.setAttribute("aria-hidden", "true");
-    var label = document.createElement("span");
-    label.className = "cname";
-    label.textContent = countryName(item.name);
-    li.appendChild(chk);
-    li.appendChild(label);
-    if (item.date) {
-      var d = document.createElement("span");
-      d.className = "vdate";
-      d.textContent = shortMonth(item.date);
-      li.appendChild(d);
-    }
-    return li;
-  }
-
-  function renderList() {
-    var listEl = document.getElementById("travel-list");
-    if (!listEl) { return; }
-    var list = visibleEntries();
-    listEl.innerHTML = "";
-    if (!list.length) {
-      var empty = document.createElement("li");
-      empty.className = "travel-empty";
-      empty.textContent = currentLang() === "zh" ? "没有匹配的国家。" : "No matching countries.";
-      listEl.appendChild(empty);
-      return;
-    }
-    var groups = [
-      { status: STATUS.visited, label: currentLang() === "zh" ? "已到访" : "Visited" },
-      { status: STATUS.planned, label: currentLang() === "zh" ? "计划中" : "Planned" },
-      { status: STATUS.unvisited, label: currentLang() === "zh" ? "未到访" : "Not yet" }
-    ];
-    groups.forEach(function (group) {
-      var items = list.filter(function (item) { return item.status === group.status; });
-      if (!items.length) { return; }
-      sortGroup(items, group.status);
-      var head = document.createElement("li");
-      head.className = "travel-group";
-      head.textContent = group.label + " \u00b7 " + items.length;
-      listEl.appendChild(head);
-      items.forEach(function (item) { listEl.appendChild(listRow(item)); });
-    });
-  }
-
-  function renderFilters() {
-    var counts = { all: state.entries.length, visited: 0, planned: 0, unvisited: 0 };
-    state.entries.forEach(function (item) { counts[item.status] = (counts[item.status] || 0) + 1; });
-    var nodes = document.querySelectorAll("[data-travel-filter]");
-    Array.prototype.forEach.call(nodes, function (btn) {
-      var key = btn.getAttribute("data-travel-filter");
-      btn.classList.toggle("active", key === state.filter);
-      btn.setAttribute("aria-pressed", key === state.filter ? "true" : "false");
-      var count = btn.querySelector(".count");
-      if (count) { count.textContent = counts[key] || 0; }
-    });
+    renderStats();
+    updateMap();
   }
 
   function renderStats() {
@@ -288,10 +187,8 @@
     var pct = (visited / total * 100);
     setText("visited-count", visited);
     setText("planned-count", planned);
-    setText("visited-summary", visited);
-    setText("total-count-summary", state.total);
-    setText("total-count", state.total);
     setText("travel-progress-pct", pct.toFixed(1) + "%");
+    setText("total-count", state.total);
     var fill = document.getElementById("travel-progress-fill");
     if (fill) { fill.style.width = pct.toFixed(1) + "%"; }
     var label = document.getElementById("travel-progress-label");
@@ -312,13 +209,6 @@
         : (currentLang() === "zh" ? "本地备用数据" : "local fallback");
       source.setAttribute("data-source", state.source);
     }
-  }
-
-  function renderAll() {
-    renderStats();
-    renderFilters();
-    renderList();
-    updateMap();
   }
 
   function loadScript(src, cb) {
@@ -417,23 +307,6 @@
     renderMarkers();
   }
 
-  function focusCountry(name) {
-    if (!state.map) { return; }
-    var layer = state.layersByName[name];
-    if (layer) {
-      try {
-        state.map.fitBounds(layer.getBounds(), { padding: [26, 26], maxZoom: 4 });
-        layer.openTooltip();
-        return;
-      } catch (err) {}
-    }
-    var marker = state.markers[name];
-    if (marker) {
-      state.map.setView(marker.getLatLng(), 4);
-      marker.openTooltip();
-    }
-  }
-
   function startMap() {
     if (state.map || state.pendingMap) { return; }
     state.pendingMap = true;
@@ -443,30 +316,6 @@
   }
 
   function bindUi() {
-    var search = document.getElementById("travel-search");
-    if (search) {
-      search.addEventListener("input", function () {
-        state.query = search.value || "";
-        renderList();
-      });
-    }
-    var filters = document.querySelector("[data-travel-filters]");
-    if (filters) {
-      filters.addEventListener("click", function (e) {
-        var btn = e.target.closest("[data-travel-filter]");
-        if (!btn) { return; }
-        state.filter = btn.getAttribute("data-travel-filter");
-        renderFilters();
-        renderList();
-      });
-    }
-    var list = document.getElementById("travel-list");
-    if (list) {
-      list.addEventListener("click", function (e) {
-        var row = e.target.closest("li[data-name]");
-        if (row) { focusCountry(row.getAttribute("data-name")); }
-      });
-    }
     var refresh = document.getElementById("travel-refresh");
     if (refresh) {
       refresh.addEventListener("click", function () {
@@ -475,12 +324,10 @@
       });
     }
     document.addEventListener("langchange", function () {
-      state.query = search ? search.value : state.query;
-      renderAll();
-    });
-    document.addEventListener("themechange", function () {
+      renderStats();
       updateMap();
     });
+    document.addEventListener("themechange", updateMap);
   }
 
   var loadedRemote = false;
