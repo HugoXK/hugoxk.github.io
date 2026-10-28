@@ -55,7 +55,7 @@ from this origin, so it stays fast and does not depend on the Cloudflare Tunnel.
   `css/main.css`.
 - **Profile image** — `profile.webp` / `profile-360.webp` with `profile.jpg` as
   the fallback. Keep the source square.
-- **Cache busting** — bump `css/main.css?v=7` when changing styles.
+- **Cache busting** — bump `css/main.css?v=8` when changing styles.
 - **Blog** — add `blog/posts/<slug>.md`, then add an entry to `js/blog-posts.js`.
   Comments use giscus (see `BLOG_GISCUS` in that file).
 - **CV** — `cv.html`; use the print button to save a PDF.

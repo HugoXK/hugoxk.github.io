@@ -1,12 +1,8 @@
 /* ============================================================
-   Countries I've visited — EDIT THIS FILE
-   "[ ] Name"          : not visited yet
-   "[X] Name"          : visited
-   "[X 2019-09] Name"  : visited, first visited 2019-09 (YYYY-MM, optional)
-   "[P] Name"          : planned
-   "[P 2026-10] Name"  : planned for 2026-10 (YYYY-MM, optional)
-   The map fill, the hover tooltip, the checklist and the counters
-   all update automatically on reload.
+   Offline fallback for the travel map.
+   The live source is data/travel.json, synced automatically from
+   portal.hugoxk.online/admin. This file is regenerated from it and
+   is only used when the live JSON cannot be fetched.
    ============================================================ */
 
 var COUNTRY_CHECKLIST = [
@@ -219,7 +215,7 @@ var COUNTRY_CHECKLIST = [
   "[P 2026-12] South Korea",
   "[ ] South Sudan",
   "[P 2027-02] Spain",
-  "[P 2026-10] Sri Lanka",
+  "[X 2026-10] Sri Lanka",
   "[ ] Sudan",
   "[ ] Suriname",
   "[ ] Svalbard and Jan Mayen",
