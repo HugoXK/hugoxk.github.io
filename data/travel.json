@@ -1,0 +1,1256 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-28T03:27:05.141Z",
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Albania",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Algeria",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "American Samoa",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Andorra",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Angola",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Anguilla",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Antarctica",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Argentina",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Armenia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Aruba",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Australia",
+      "status": "visited",
+      "date": "2025-03"
+    },
+    {
+      "name": "Austria",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "Azerbaijan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bahamas",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bahrain",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bangladesh",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Barbados",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Belarus",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Belgium",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Belize",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Benin",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bermuda",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bhutan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bolivia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Botswana",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bouvet Island",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Brazil",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "British Indian Ocean Territory",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "British Virgin Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Brunei",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Bulgaria",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Burkina Faso",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Burundi",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cambodia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cameroon",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Canada",
+      "status": "visited",
+      "date": "2023-12"
+    },
+    {
+      "name": "Cape Verde",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Caribbean Netherlands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cayman Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Central African Republic",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Chad",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Chile",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "China",
+      "status": "visited",
+      "date": "2001-05"
+    },
+    {
+      "name": "Christmas Island",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cocos (Keeling) Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Colombia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Comoros",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cook Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Costa Rica",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Croatia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cuba",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Curaçao",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Cyprus",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Czechia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Denmark",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Djibouti",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Dominica",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Dominican Republic",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "DR Congo",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Ecuador",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Egypt",
+      "status": "visited",
+      "date": "2023-08"
+    },
+    {
+      "name": "El Salvador",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Equatorial Guinea",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Eritrea",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Estonia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Eswatini",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Ethiopia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Falkland Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Faroe Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Fiji",
+      "status": "visited",
+      "date": "2025-03"
+    },
+    {
+      "name": "Finland",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "France",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "French Guiana",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "French Polynesia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "French Southern and Antarctic Lands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Gabon",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Gambia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Georgia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Germany",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "Ghana",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Gibraltar",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Greece",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Greenland",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Grenada",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guadeloupe",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guam",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guatemala",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guernsey",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guinea",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guinea-Bissau",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Guyana",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Haiti",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Heard Island and McDonald Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Honduras",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Hong Kong",
+      "status": "visited",
+      "date": "2015-03"
+    },
+    {
+      "name": "Hungary",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Iceland",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "India",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Indonesia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Iran",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Iraq",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Ireland",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Isle of Man",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Israel",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Italy",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "Ivory Coast",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Jamaica",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Japan",
+      "status": "visited",
+      "date": "2025-02"
+    },
+    {
+      "name": "Jersey",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Jordan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kazakhstan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kenya",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kiribati",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kosovo",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kuwait",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Kyrgyzstan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Laos",
+      "status": "visited",
+      "date": "2026-06"
+    },
+    {
+      "name": "Latvia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Lebanon",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Lesotho",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Liberia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Libya",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Liechtenstein",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Lithuania",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Luxembourg",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Macau",
+      "status": "visited",
+      "date": "2015-03"
+    },
+    {
+      "name": "Madagascar",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Malawi",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Malaysia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Maldives",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mali",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Malta",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Marshall Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Martinique",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mauritania",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mauritius",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mayotte",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mexico",
+      "status": "visited",
+      "date": "2024-07"
+    },
+    {
+      "name": "Micronesia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Moldova",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Monaco",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mongolia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Montenegro",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Montserrat",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Morocco",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Mozambique",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Myanmar",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Namibia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Nauru",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Nepal",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Netherlands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "New Caledonia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "New Zealand",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Nicaragua",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Niger",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Nigeria",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Niue",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Norfolk Island",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "North Korea",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "North Macedonia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Northern Mariana Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Norway",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Oman",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Pakistan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Palau",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Palestine",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Panama",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Papua New Guinea",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Paraguay",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Peru",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Philippines",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Pitcairn Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Poland",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Portugal",
+      "status": "planned",
+      "date": "2027-02"
+    },
+    {
+      "name": "Puerto Rico",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Qatar",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Republic of the Congo",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Romania",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Russia",
+      "status": "visited",
+      "date": "2019-07"
+    },
+    {
+      "name": "Rwanda",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Réunion",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Barthélemy",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Lucia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Martin",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Pierre and Miquelon",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saint Vincent and the Grenadines",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Samoa",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "San Marino",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Saudi Arabia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Senegal",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Serbia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Seychelles",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Sierra Leone",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Singapore",
+      "status": "planned",
+      "date": "2026-12"
+    },
+    {
+      "name": "Sint Maarten",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Slovakia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Slovenia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Solomon Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Somalia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "South Africa",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "South Georgia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "South Korea",
+      "status": "planned",
+      "date": "2026-12"
+    },
+    {
+      "name": "South Sudan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Spain",
+      "status": "planned",
+      "date": "2027-02"
+    },
+    {
+      "name": "Sri Lanka",
+      "status": "visited",
+      "date": "2026-10"
+    },
+    {
+      "name": "Sudan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Suriname",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Svalbard and Jan Mayen",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Sweden",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Switzerland",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "Syria",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "São Tomé and Príncipe",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Taiwan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tajikistan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tanzania",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Thailand",
+      "status": "visited",
+      "date": "2026-05"
+    },
+    {
+      "name": "Timor-Leste",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Togo",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tokelau",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tonga",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tunisia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Turkmenistan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Turks and Caicos Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Tuvalu",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Türkiye",
+      "status": "visited",
+      "date": "2026-02"
+    },
+    {
+      "name": "Uganda",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Ukraine",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "United Arab Emirates",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "United Kingdom",
+      "status": "visited",
+      "date": "2024-03"
+    },
+    {
+      "name": "United States",
+      "status": "visited",
+      "date": "2017-11"
+    },
+    {
+      "name": "United States Minor Outlying Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "United States Virgin Islands",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Uruguay",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Uzbekistan",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Vanuatu",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Vatican City",
+      "status": "visited",
+      "date": "2015-08"
+    },
+    {
+      "name": "Venezuela",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Vietnam",
+      "status": "visited",
+      "date": "2016-08"
+    },
+    {
+      "name": "Wallis and Futuna",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Western Sahara",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Yemen",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Zambia",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Zimbabwe",
+      "status": "unvisited",
+      "date": ""
+    },
+    {
+      "name": "Åland Islands",
+      "status": "unvisited",
+      "date": ""
+    }
+  ]
+}
