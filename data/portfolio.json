@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T14:48:32.844Z",
+  "updatedAt": "2026-10-29T14:58:45.633Z",
   "items": [
     {
       "id": "666eed66eab146dd82f4",
@@ -20,7 +20,27 @@
       "height": 743,
       "file": "/portfolio/666eed66eab146dd82f4.png",
       "thumb": "/portfolio/666eed66eab146dd82f4-thumb.png",
-      "createdAt": "2026-10-29T14:48:32.844Z",
+      "createdAt": "2026-10-29T14:48:32.844Z"
+    },
+    {
+      "id": "d558467905d8465ba590",
+      "title": "Giraffe with Sydney Skyline",
+      "titleZh": "长颈鹿与悉尼天际线",
+      "caption": "Shot at Taronga Zoo. The giraffe enclosure frames the harbour, Opera House and CBD skyline across the water.",
+      "captionZh": "摄于塔龙加动物园。长颈鹿展区框住海湾，对岸是悉尼歌剧院与城市天际线。",
+      "location": "Sydney, Australia",
+      "date": "2025-02",
+      "tags": [
+        "travel",
+        "sydney",
+        "harbour",
+        "australia"
+      ],
+      "width": 2400,
+      "height": 1800,
+      "file": "/portfolio/d558467905d8465ba590.png",
+      "thumb": "/portfolio/d558467905d8465ba590-thumb.png",
+      "createdAt": "2026-10-29T14:58:45.633Z",
       "uploadedBy": "ke.xu@zju.edu.cn"
     }
   ]
