@@ -1,5 +1,27 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T08:07:48.760Z",
-  "items": []
+  "updatedAt": "2026-10-29T14:48:32.844Z",
+  "items": [
+    {
+      "id": "666eed66eab146dd82f4",
+      "title": "Yeni Camii at Golden Horn Dusk",
+      "titleZh": "金角湾暮色 · 耶尼清真寺",
+      "caption": "Viewed from Galata Bridge, the boundary between old and new Istanbul. Ramadan mahya lights stretch between the minarets of Yeni Camii.",
+      "captionZh": "摄于加拉塔大桥，伊斯坦布尔老城与新城的分界。耶尼清真寺的宣礼塔之间，斋月麦哈亚灯缓缓亮起。",
+      "location": "Istanbul, Turkey",
+      "date": "2026-02",
+      "tags": [
+        "travel",
+        "istanbul",
+        "sunset",
+        "turkiye"
+      ],
+      "width": 1320,
+      "height": 743,
+      "file": "/portfolio/666eed66eab146dd82f4.png",
+      "thumb": "/portfolio/666eed66eab146dd82f4-thumb.png",
+      "createdAt": "2026-10-29T14:48:32.844Z",
+      "uploadedBy": "ke.xu@zju.edu.cn"
+    }
+  ]
 }
