@@ -1,0 +1,73 @@
+name: Platform status mirror
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: platform-status-mirror
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    name: Mirror the public status
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch the live status
+        id: fetch
+        run: |
+          set -euo pipefail
+          if curl -fsS --max-time 20 https://hugoxk.online/api/status -o /tmp/status.json; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+          date -u +%Y-%m-%dT%H:%M:%SZ > /tmp/now
+
+      - name: Find the mirror issue
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          number=$(gh issue list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state open \
+            --search 'in:title "Platform status mirror"' \
+            --json number,title \
+            --jq '.[] | select(.title == "Platform status mirror") | .number' | head -1)
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Update the mirror
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          FETCH_OK: ${{ steps.fetch.outputs.ok }}
+          NUMBER: ${{ steps.issue.outputs.number }}
+        run: |
+          set -euo pipefail
+          now=$(cat /tmp/now)
+          if [ "$FETCH_OK" = "true" ]; then
+            jq --arg now "$now" '. + {mirrorOk: true, mirroredAt: $now} | del(.mirrorFailedAt, .mirrorError)' /tmp/status.json > /tmp/body.json
+          else
+            if [ -n "$NUMBER" ]; then
+              gh issue view "$NUMBER" --repo "$REPO" --json body --jq .body > /tmp/existing.json 2>/dev/null || true
+            fi
+            if [ -s /tmp/existing.json ] && jq -e . /tmp/existing.json >/dev/null 2>&1; then
+              jq --arg now "$now" '. + {mirrorOk: false, mirrorFailedAt: $now, mirrorError: "live fetch failed"}' /tmp/existing.json > /tmp/body.json
+            else
+              printf '{"ok":false,"mirrorOk":false,"mirrorFailedAt":"%s","mirrorError":"live fetch failed","services":{},"platform":{}}\n' "$now" > /tmp/body.json
+            fi
+          fi
+          if [ -z "$NUMBER" ]; then
+            gh issue create --repo "$REPO" --title 'Platform status mirror' --body-file /tmp/body.json
+          else
+            gh issue edit "$NUMBER" --repo "$REPO" --body-file /tmp/body.json
+          fi
+          echo "mirrored fetch=$FETCH_OK issue=${NUMBER:-new} at=$now"
