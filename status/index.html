@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>External Status — HUGOXK LAB</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090d">
+<style>
+:root{--bg:#07090d;--surface:#0c1017;--line:#1d2531;--ink:#eef3f9;--muted:#9aa6b8;--muted-2:#7a8798;--accent:#7b95ff;--mint:#6ee7c8;--max:1080px;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.15;letter-spacing:-.02em}.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;border-bottom:1px solid var(--line);padding:0 max(20px,calc((100vw - var(--max))/2 + 24px));position:sticky;top:0;z-index:10;background:rgba(7,9,13,.86)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:13px}.mark{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;background:var(--accent);color:#07101f;font-weight:900}.brand small{font-family:var(--mono);font-size:9px;color:var(--muted)}
+.nav{display:flex;gap:16px;color:var(--muted);font-size:12px}.nav a{display:inline-flex;align-items:center;min-height:44px}
+.hero{padding:56px 0 34px}.kicker{color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}h1{font-size:clamp(34px,5vw,48px);margin:14px 0 14px}.lead{color:var(--muted);max-width:760px;font-size:15px}
+.banner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.banner .dot{width:9px;height:9px;border-radius:50%;background:var(--muted-2);flex:none}.banner.ok .dot{background:var(--mint)}.banner.warn .dot{background:#f5c86b}.banner.down .dot{background:#ff7a7a}.banner b{font-size:14px}.banner span{color:var(--muted);font-size:12px}.banner .meta{margin-left:auto;font-family:var(--mono);font-size:10px;white-space:nowrap}
+h2{font-size:20px;margin:30px 0 10px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);font-size:12.5px}th{color:var(--muted);font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.02)}tr:last-child td{border-bottom:0}td b{font-size:12.5px}.state-ok{color:var(--mint)}.state-warn{color:#f5c86b}.state-down{color:#ff7a7a}.state-checking{color:var(--muted)}.svc-detail{display:block;color:var(--muted-2);font-family:var(--mono);font-size:9.5px;margin-top:2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:26px}.fact{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface)}.fact span{display:block;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase}.fact b{display:block;margin-top:4px;font-size:12.5px;overflow-wrap:anywhere}
+.events{list-style:none;padding:0;margin:0;display:grid;gap:7px}.events li{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:var(--surface);font-size:12px}.events time{color:var(--muted);font-family:var(--mono);font-size:10px;white-space:nowrap}.events b{font-size:12px}.events span{color:var(--muted)}.events .empty{color:var(--muted)}
+.note{color:var(--muted);font-size:12px;margin-top:22px}.note a{color:var(--accent)}footer{border-top:1px solid var(--line);margin-top:36px;padding:20px max(20px,calc((100vw - var(--max))/2 + 24px));color:var(--muted);font-family:var(--mono);font-size:10px}
+@media(max-width:640px){h1{font-size:34px}table{min-width:0}th{display:none}td{display:block;border-bottom:0;padding:8px 12px}td:first-child{font-weight:700;padding-top:12px}td[data-label]::before{content:attr(data-label) " ";color:var(--muted);font-family:var(--mono);font-size:9px;text-transform:uppercase}tr{display:block;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="head">
+  <a class="brand" href="https://hugoxk.online/"><span class="mark">H</span> HUGOXK <small>LAB / STATUS</small></a>
+  <nav class="nav" aria-label="Status links"><a href="https://hugoxk.online/status/">Main status ↗</a><a href="https://hugoxk.online/">Home ↗</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <span class="kicker">External status mirror · GitHub Pages</span>
+    <h1>Platform <em>status.</em></h1>
+    <p class="lead">This page is hosted independently on GitHub Pages. It reads the live status when the main endpoint is reachable, and falls back to the last successful mirror when it is not.</p>
+    <div class="banner" data-banner><span class="dot"></span><b data-title>Checking…</b><span data-summary></span><span class="meta" data-at>—</span></div>
+  </section>
+
+  <h2>Public services</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Service</th><th>Entry</th><th>Result</th><th>Access</th></tr></thead>
+    <tbody data-group="public">
+      <tr data-static="true"><td data-label="Service">AgentDescent</td><td data-label="Entry"><a href="https://agentdescent.hugoxk.online/">agentdescent.hugoxk.online</a></td><td data-label="Result" class="state-ok">static</td><td data-label="Access">Framework · public</td></tr>
+      <tr data-service="flybot"><td data-label="Service">FlyBot</td><td data-label="Entry"><a href="https://flybot.hugoxk.online/">flybot.hugoxk.online</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Online service · invite-only</td></tr>
+      <tr data-service="sciencediscovery"><td data-label="Service">ScienceDiscovery</td><td data-label="Entry"><a href="https://sciencediscovery.hugoxk.online/">sciencediscovery.hugoxk.online</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Online service · GitHub SSO</td></tr>
+      <tr data-service="bot-social"><td data-label="Service">Bot Social</td><td data-label="Entry"><a href="https://social.hugoxk.online/ui">social.hugoxk.online</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Online service · FlyBot extension</td></tr>
+      <tr data-service="fledge"><td data-label="Service">Fledge</td><td data-label="Entry"><a href="https://fledge.hugoxk.online/">fledge.hugoxk.online</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Online service · GitHub login</td></tr>
+      <tr data-service="portal"><td data-label="Service">Portal</td><td data-label="Entry"><a href="https://portal.hugoxk.online/">portal.hugoxk.online</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Console · Cloudflare Access</td></tr>
+      <tr data-service="docs"><td data-label="Service">Fledge Docs</td><td data-label="Entry"><a href="https://fledge-docs.hugoxk.online/docs/">fledge-docs.hugoxk.online/docs</a></td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Access">Static documentation</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Platform</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Check</th><th>Entry</th><th>Result</th><th>Detail</th></tr></thead>
+    <tbody data-group="platform">
+      <tr data-service="landing"><td data-label="Check">Landing</td><td data-label="Entry">hugoxk.online</td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Detail">Static edge · nginx</td></tr>
+      <tr data-service="cloudflared"><td data-label="Check">Cloudflare Tunnel</td><td data-label="Entry">127.0.0.1:20241/ready</td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Detail">Public edge</td></tr>
+      <tr data-service="model-router"><td data-label="Check">Model Router</td><td data-label="Entry">127.0.0.1:8081/healthz</td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Detail">Internal routing</td></tr>
+      <tr data-service="fledge-backup"><td data-label="Check">Fledge Backup</td><td data-label="Entry">fledge-data/backups</td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Detail">Daily encrypted backup <span class="svc-detail" data-cell="detail"></span></td></tr>
+      <tr data-service="external"><td data-label="Check">External Edge</td><td data-label="Entry">public HTTPS</td><td data-label="Result" data-cell="result" class="state-checking">—</td><td data-label="Detail">Five-minute public probe <span class="svc-detail" data-cell="detail"></span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="facts">
+    <div class="fact"><span>Source</span><b data-source>—</b></div>
+    <div class="fact"><span>Mirrored</span><b data-mirrored>—</b></div>
+    <div class="fact"><span>Fledge</span><b data-release>—</b></div>
+    <div class="fact"><span>Queue</span><b data-queue>—</b></div>
+    <div class="fact"><span>Backup</span><b data-backup>—</b></div>
+    <div class="fact"><span>Tunnel</span><b data-tunnel>—</b></div>
+  </div>
+
+  <h2>Recent changes</h2>
+  <ul class="events" data-events></ul>
+  <p class="note">This page is a fallback, not a replacement for the main status page. The live endpoint is <a href="https://hugoxk.online/api/status">hugoxk.online/api/status</a>. The mirror issue is public and contains health metadata only.</p>
+</main>
+<footer>© 2026 HUGOXK // LAB · external status mirror on GitHub Pages</footer>
+<script>
+(() => {
+  const LIVE = 'https://hugoxk.online/api/status';
+  const ISSUES = 'https://api.github.com/repos/HugoXK/hugoxk.github.io/issues?state=open&per_page=100';
+  const $ = (s) => document.querySelector(s);
+  const state = { mirror: null, mirrorAt: 0 };
+  const fmt = (iso) => {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return iso;
+    return d.toLocaleString('en-GB', { timeZone: 'Asia/Shanghai', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  };
+  const set = (selector, value) => { const el = $(selector); if (el) el.textContent = value; };
+  function render(data, source, detail) {
+    const services = (data && data.services) || {};
+    const stats = { public: { ok: 0, total: 0 }, platform: { ok: 0, total: 0 } };
+    for (const row of Array.from(document.querySelectorAll('[data-service]'))) {
+      const s = services[row.dataset.service];
+      const cell = row.querySelector('[data-cell="result"]');
+      const extra = row.querySelector('[data-cell="detail"]');
+      if (!cell) continue;
+      cell.classList.remove('state-checking', 'state-ok', 'state-warn', 'state-down');
+      if (!s) { cell.textContent = 'unknown'; cell.classList.add('state-down'); continue; }
+      const group = row.closest('[data-group]')?.dataset.group || 'public';
+      stats[group].total += 1;
+      if (s.ok) { stats[group].ok += 1; cell.textContent = (s.ms ?? 0) + 'ms'; cell.classList.add('state-ok'); }
+      else if (s.state === 'degraded') { cell.textContent = 'degraded'; cell.classList.add('state-warn'); }
+      else { cell.textContent = 'offline'; cell.classList.add('state-down'); }
+      if (extra && s.detail) extra.textContent = s.detail;
+    }
+    const p = (data && data.platform) || {};
+    set('[data-release]', p.release ? `${p.release.version || '—'} / ${p.release.commit || '—'}` : '—');
+    set('[data-queue]', p.queueDispatch ? 'on' : 'off');
+    set('[data-backup]', p.backup || '—');
+    set('[data-tunnel]', p.tunnel ? 'ready' : 'offline');
+    set('[data-source]', source);
+    set('[data-mirrored]', detail.mirroredAt ? fmt(detail.mirroredAt) : '—');
+    const banner = $('[data-banner]');
+    const title = $('[data-title]');
+    const summary = $('[data-summary]');
+    const publicBad = stats.public.total - stats.public.ok;
+    const platformBad = stats.platform.total - stats.platform.ok;
+    banner.classList.remove('ok', 'warn', 'down');
+    if (source === 'live') {
+      banner.classList.add(publicBad === 0 && platformBad === 0 ? 'ok' : publicBad === 0 ? 'warn' : 'down');
+      title.textContent = publicBad === 0 && platformBad === 0 ? 'Live · all platform checks green' : publicBad === 0 ? 'Live · platform checks degraded' : 'Live · public services degraded';
+    } else if (detail.mirrorOk === false) {
+      banner.classList.add('down');
+      title.textContent = 'Live unreachable · showing last known';
+    } else {
+      banner.classList.add('warn');
+      title.textContent = 'External mirror · last successful update';
+    }
+    summary.textContent = `public ${stats.public.ok}/${stats.public.total} · platform ${stats.platform.ok}/${stats.platform.total}`;
+    set('[data-at]', fmt(data && data.at));
+    const list = $('[data-events]');
+    if (list) {
+      list.textContent = '';
+      const events = (data && data.events) || [];
+      if (!events.length) {
+        const li = document.createElement('li'); li.className = 'empty'; li.textContent = 'No transitions recorded'; list.appendChild(li);
+      } else {
+        for (const event of events) {
+          const li = document.createElement('li');
+          const time = document.createElement('time'); time.textContent = fmt(event.at);
+          const name = document.createElement('b'); name.textContent = event.name || event.service || 'service';
+          const message = document.createElement('span'); message.textContent = event.message || '';
+          li.append(time, name, message); list.appendChild(li);
+        }
+      }
+    }
+  }
+  async function loadMirror() {
+    if (state.mirror && Date.now() - state.mirrorAt < 5 * 60_000) return render(state.mirror, 'mirror', { mirrorOk: state.mirror.mirrorOk, mirroredAt: state.mirror.mirroredAt });
+    try {
+      const response = await fetch(ISSUES, { headers: { accept: 'application/vnd.github+json' } });
+      if (!response.ok) throw new Error('GitHub API HTTP ' + response.status);
+      const issues = await response.json();
+      const issue = issues.find((item) => item.title === 'Platform status mirror');
+      if (!issue || !issue.body) throw new Error('mirror issue not found');
+      const mirror = JSON.parse(issue.body);
+      state.mirror = mirror;
+      state.mirrorAt = Date.now();
+      render(mirror, 'mirror', { mirrorOk: mirror.mirrorOk, mirroredAt: mirror.mirroredAt });
+    } catch (error) {
+      const banner = $('[data-banner]');
+      banner.classList.remove('ok', 'warn');
+      banner.classList.add('down');
+      set('[data-title]', 'Status feed unavailable');
+      set('[data-summary]', String(error));
+      set('[data-at]', '—');
+    }
+  }
+  async function load() {
+    try {
+      const response = await fetch(LIVE, { cache: 'no-store' });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      render(await response.json(), 'live', {});
+    } catch (error) {
+      await loadMirror();
+    }
+  }
+  load();
+  setInterval(() => { if (!document.hidden) load(); }, 30000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+})();
+</script>
+</body>
+</html>
